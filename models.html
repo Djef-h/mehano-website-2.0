@@ -10,9 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         #model-viewer-section {
@@ -409,42 +408,37 @@
                 robotGroup.remove(robotGroup.children[0]); 
             }
 
-            const mtlLoader = new THREE.MTLLoader();
-            const BASE = 'https://github.com/31Benzi/mehano-website-2.0/releases/download/v1.0-models';
-            mtlLoader.load(`${BASE}/${modelName}.mtl`, (materials) => {
-                materials.preload();
-                const objLoader = new THREE.OBJLoader();
-                objLoader.setMaterials(materials);
-                objLoader.load(`${BASE}/${modelName}.obj`, (obj) => {
-                    obj.traverse((child) => {
-                        if (child.isMesh) {
-                            child.castShadow = true;
-                            child.receiveShadow = true;
-                        }
-                    });
-
-                    const box = new THREE.Box3().setFromObject(obj);
-                    const center = box.getCenter(new THREE.Vector3());
-                    const size = box.getSize(new THREE.Vector3());
-                    const maxDim = Math.max(size.x, size.y, size.z);
-                    const scale = 4.5 / maxDim;
-                    
-                    obj.scale.setScalar(scale);
-                    obj.position.sub(center.multiplyScalar(scale));
-                    robotGroup.add(obj);
-
-                    loaderOverlay.classList.add('fade-out');
-                }, 
-                (xhr) => {
-                    if (xhr.lengthComputable) {
-                        const percent = Math.round((xhr.loaded / xhr.total) * 100);
-                        statusText.innerText = `${t.models_loading.replace('...', ': ')} ${percent}%`;
+            const loader = new THREE.GLTFLoader();
+            loader.load(`./assets/${modelName}.glb`, (gltf) => {
+                const obj = gltf.scene;
+                obj.traverse((child) => {
+                    if (child.isMesh) {
+                        child.castShadow = true;
+                        child.receiveShadow = true;
                     }
-                },
-                (error) => {
-                    console.error('Error loading model:', error);
-                    statusText.innerText = "ГРЕШКА ПРИ ЗАРЕЖДАНЕ";
                 });
+
+                const box = new THREE.Box3().setFromObject(obj);
+                const center = box.getCenter(new THREE.Vector3());
+                const size = box.getSize(new THREE.Vector3());
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const scale = 4.5 / maxDim;
+                
+                obj.scale.setScalar(scale);
+                obj.position.sub(center.multiplyScalar(scale));
+                robotGroup.add(obj);
+
+                loaderOverlay.classList.add('fade-out');
+            }, 
+            (xhr) => {
+                if (xhr.lengthComputable) {
+                    const percent = Math.round((xhr.loaded / xhr.total) * 100);
+                    statusText.innerText = `${t.models_loading.replace('...', ': ')} ${percent}%`;
+                }
+            },
+            (error) => {
+                console.error('Error loading model:', error);
+                statusText.innerText = "ГРЕШКА ПРИ ЗАРЕЖДАНЕ";
             });
         }
 

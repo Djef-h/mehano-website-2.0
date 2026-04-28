@@ -643,65 +643,52 @@ reveals.forEach(el => observer.observe(el));
     const robot = new THREE.Group();
     scene.add(robot);
 
-    const mtlLoader = new THREE.MTLLoader();
-    console.log("Starting MTL load...");
-    mtlLoader.load('./assets/Robot.mtl', (materials) => {
-        materials.preload();
-        console.log("Materials loaded successfully!");
+    const loader = new THREE.GLTFLoader();
+    console.log("Starting GLTF load...");
+    loader.load('./assets/Robot.glb', (gltf) => {
+        console.log("Model loaded successfully!");
+        const obj = gltf.scene;
         
-        const objLoader = new THREE.OBJLoader();
-        objLoader.setMaterials(materials);
+        obj.traverse((child) => {
+            if (child.isMesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+            }
+        });
+
+        const boundingBox = new THREE.Box3().setFromObject(obj);
+        const center = boundingBox.getCenter(new THREE.Vector3());
+        const size = boundingBox.getSize(new THREE.Vector3());
+        console.log("Model dimensions:", size);
+
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const scale = 3.2 / maxDim;
         
-        console.log("Starting OBJ load...");
-        objLoader.load('./assets/Robot.obj', (obj) => {
-            console.log("Model loaded successfully!");
-            
-            obj.traverse((child) => {
-                if (child.isMesh) {
-                    if (child.material) {
-                        child.material.needsUpdate = true;
-                    }
-                    child.castShadow = true;
-                    child.receiveShadow = true;
-                }
-            });
-
-            const boundingBox = new THREE.Box3().setFromObject(obj);
-            const center = boundingBox.getCenter(new THREE.Vector3());
-            const size = boundingBox.getSize(new THREE.Vector3());
-            console.log("Model dimensions:", size);
-
-            const maxDim = Math.max(size.x, size.y, size.z);
-            const scale = 3.2 / maxDim;
-            
-            obj.scale.setScalar(scale);
-            obj.position.sub(center.multiplyScalar(scale));
-            
-            // Initial presentation rotation
-            obj.rotation.y = Math.PI / 4; 
-            
-            robot.add(obj);
-            
-            // Hide preloader
-            const siteLoader = document.getElementById('site-loader');
-            if (siteLoader) {
-                siteLoader.classList.add('fade-out');
-                setTimeout(() => {
-                    siteLoader.style.display = 'none';
-                }, 800);
-            }
-        }, 
-        (xhr) => { 
-            if (xhr.lengthComputable) {
-                const percent = Math.round((xhr.loaded / xhr.total) * 100);
-                const bar = document.getElementById('loader-progress');
-                if (bar) bar.style.width = percent + '%';
-            }
-        },
-        (error) => { console.error('OBJ Load Error:', error); });
+        obj.scale.setScalar(scale);
+        obj.position.sub(center.multiplyScalar(scale));
+        
+        // Initial presentation rotation
+        obj.rotation.y = Math.PI / 4; 
+        
+        robot.add(obj);
+        
+        // Hide preloader
+        const siteLoader = document.getElementById('site-loader');
+        if (siteLoader) {
+            siteLoader.classList.add('fade-out');
+            setTimeout(() => {
+                siteLoader.style.display = 'none';
+            }, 800);
+        }
+    }, 
+    (xhr) => { 
+        if (xhr.lengthComputable) {
+            const percent = Math.round((xhr.loaded / xhr.total) * 100);
+            const bar = document.getElementById('loader-progress');
+            if (bar) bar.style.width = percent + '%';
+        }
     },
-    (xhr) => { console.log("Loading MTL..."); },
-    (error) => { console.error('MTL Load Error:', error); });
+    (error) => { console.error('GLTF Load Error:', error); });
 
     robot.position.y = 0.3;
     scene.add(robot);
