@@ -410,11 +410,12 @@
             }
 
             const mtlLoader = new THREE.MTLLoader();
-            mtlLoader.load(`./assets/${modelName}.mtl`, (materials) => {
+            const cacheBust = Date.now();
+            mtlLoader.load(`/assets/${modelName}.mtl?v=`, (materials) => {
                 materials.preload();
                 const objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.load(`./assets/${modelName}.obj`, (obj) => {
+                objLoader.load(`/assets/${modelName}.obj?v=`, (obj) => {
                     obj.traverse((child) => {
                         if (child.isMesh) {
                             child.castShadow = true;
