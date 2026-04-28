@@ -410,12 +410,12 @@
             }
 
             const mtlLoader = new THREE.MTLLoader();
-            const cacheBust = Date.now();
-            mtlLoader.load(`/assets/${modelName}.mtl?v=`, (materials) => {
+            const BASE = 'https://github.com/31Benzi/mehano-website-2.0/releases/download/v1.0-models';
+            mtlLoader.load(`${BASE}/${modelName}.mtl`, (materials) => {
                 materials.preload();
                 const objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.load(`/assets/${modelName}.obj?v=`, (obj) => {
+                objLoader.load(`${BASE}/${modelName}.obj`, (obj) => {
                     obj.traverse((child) => {
                         if (child.isMesh) {
                             child.castShadow = true;
