@@ -385,12 +385,21 @@ nav {
 
 .mobile-menu a {
     text-decoration: none;
-    color: #999;
+    color: var(--text2);
     font-size: 0.95rem;
     font-weight: 500;
-    padding: 14px 20px;
+    padding: 12px 20px;
     border-radius: 16px;
     transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-menu a svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
 }
 
 .mobile-menu a:hover {
