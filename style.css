@@ -29,9 +29,7 @@ html {
 
 body {
     font-family: var(--font);
-    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
-                url('assets/team_mehano_logo_files/mehano_team.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
     line-height: 1.6;
@@ -419,6 +417,9 @@ nav {
     padding: 120px 40px 80px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('assets/team_mehano_logo_files/mehano_team.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 /* SITE LOADER */
