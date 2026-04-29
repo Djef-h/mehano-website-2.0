@@ -1,7 +1,7 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
-        site_logo: "МЕХА<span>НО</span>", nav_home: "Начало",
+        site_logo: "Mehano",
         nav_about: "За нас", nav_code: "Код", nav_project: "Проект",
         nav_docs: "Документи", nav_team: "Отбор", nav_location: "Място", nav_contact: "Свържи се",
         nav_models: "3D Модели",
@@ -103,7 +103,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">спечели_турнира</span>())`,
     },
     en: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Home",
         nav_about: "About", nav_code: "Code", nav_project: "Project",
         nav_docs: "Documents", nav_team: "Team", nav_location: "Location", nav_contact: "Contact",
@@ -206,7 +206,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     el: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
         nav_docs: "Έγγραφα", nav_team: "Ομάδα", nav_location: "Τοποθεσία", nav_contact: "Επικοινωνία",
@@ -309,7 +309,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     zh: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "首页",
         nav_about: "关于我们", nav_code: "代码", nav_project: "项目",
         nav_docs: "文件", nav_team: "团队", nav_location: "地点", nav_contact: "联系",
@@ -412,7 +412,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     pt: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Início",
         nav_about: "Sobre", nav_code: "Código", nav_project: "Projeto",
         nav_docs: "Documentos", nav_team: "Equipa", nav_location: "Local", nav_contact: "Contato",
@@ -516,7 +516,7 @@ const i18n = {
 
     },
     es: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Inicio",
         nav_about: "Nosotros", nav_code: "Código", nav_project: "Proyecto",
         nav_docs: "Documentos", nav_team: "Equipo", nav_location: "Lugar", nav_contact: "Contacto",
@@ -621,7 +621,7 @@ const i18n = {
     },
 
         de: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Startseite",
         nav_about: "Über uns", nav_code: "Code", nav_project: "Projekt",
         nav_docs: "Dokumente", nav_team: "Team", nav_location: "Standort", nav_contact: "Kontakt",
@@ -724,7 +724,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">turnier_gewinnen</span>())`,
     },
     fr: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "Accueil",
         nav_about: "À propos", nav_code: "Code", nav_project: "Projet",
         nav_docs: "Documents", nav_team: "Équipe", nav_location: "Emplacement", nav_contact: "Contact",
@@ -827,7 +827,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">gagner_tournoi</span>())`,
     },
     ja: {
-        site_logo: "MEHA<span>NO</span>",
+        site_logo: "Mehano",
         nav_home: "ホーム",
         nav_about: "私たちについて", nav_code: "コード", nav_project: "プロジェクト",
         nav_docs: "ドキュメント", nav_team: "チーム", nav_location: "場所", nav_contact: "連絡",
