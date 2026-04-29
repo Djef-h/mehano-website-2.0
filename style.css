@@ -403,6 +403,8 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 120px 40px 80px;
     position: relative;
     overflow: hidden;
@@ -509,9 +511,13 @@ nav {
 }
 
 .hero-content {
-    max-width: 580px;
+    max-width: 800px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-title {
@@ -528,16 +534,19 @@ nav {
     font-size: 1.05rem;
     color: var(--text2);
     font-weight: 400;
-    max-width: 420px;
+    max-width: 600px;
     line-height: 1.65;
     margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
     animation: fadeUp 0.7s 0.2s ease both;
 }
 
 
 .hero-stats {
     display: flex;
-    gap: 32px;
+    justify-content: center;
+    gap: 48px;
     margin-top: 56px;
     animation: fadeUp 0.7s 0.4s ease both;
 }
