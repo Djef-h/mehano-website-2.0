@@ -1,7 +1,7 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
-        nav_home: "Начало",
+        site_logo: "МЕХА<span>НО</span>", nav_home: "Начало",
         nav_about: "За нас", nav_code: "Код", nav_project: "Проект",
         nav_docs: "Документи", nav_team: "Отбор", nav_location: "Място", nav_contact: "Свържи се",
         nav_models: "3D Модели",
@@ -103,6 +103,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">спечели_турнира</span>())`,
     },
     en: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "Home",
         nav_about: "About", nav_code: "Code", nav_project: "Project",
         nav_docs: "Documents", nav_team: "Team", nav_location: "Location", nav_contact: "Contact",
@@ -205,6 +206,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     el: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
         nav_docs: "Έγγραφα", nav_team: "Ομάδα", nav_location: "Τοποθεσία", nav_contact: "Επικοινωνία",
@@ -268,6 +270,7 @@ const i18n = {
         name_ivan: "Ιβάν Πασόφ", name_dilyan: "Ντιλιάν Γιορντάνοφ", name_kristian: "Κριστιγιάν Πετκόφ",
     },
     zh: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "首页",
         nav_about: "关于我们", nav_code: "代码", nav_project: "项目",
         nav_docs: "文件", nav_team: "团队", nav_location: "地点", nav_contact: "联系",
@@ -331,6 +334,7 @@ const i18n = {
         name_ivan: "伊万·帕绍夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂扬·佩特科夫",
     },
     pt: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "Início",
         nav_about: "Sobre", nav_code: "Código", nav_project: "Projeto",
         nav_docs: "Documentos", nav_team: "Equipa", nav_location: "Local", nav_contact: "Contato",
@@ -394,6 +398,7 @@ const i18n = {
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
     },
     es: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "Inicio",
         nav_about: "Nosotros", nav_code: "Código", nav_project: "Proyecto",
         nav_docs: "Documentos", nav_team: "Equipo", nav_location: "Lugar", nav_contact: "Contacto",
@@ -457,6 +462,7 @@ const i18n = {
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
     },
     ja: {
+        site_logo: "MEHA<span>NO</span>",
         nav_home: "ホーム",
         nav_about: "私たちについて", nav_code: "コード", nav_project: "プロジェクト",
         nav_docs: "ドキュメント", nav_team: "チーム", nav_location: "場所", nav_contact: "連絡",
