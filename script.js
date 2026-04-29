@@ -686,12 +686,42 @@ const i18n = {
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Auf GitHub ausführen →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Geheimer Algorithmus (nicht den Richtern zeigen)</span>
+
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">essen</span><span class="op">,</span> <span class="var">zufall</span><span class="op">,</span> <span class="var">träume</span><span class="op">,</span> <span class="var">panik</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hoffnung</span><span class="op">,</span> <span class="var">wille</span><span class="op">,</span> <span class="var">lebensmittel</span>
+
+<span class="cls">ROBOTER</span>        <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># der klügste Roboter in Burgas</span>
+<span class="cls">ESSEN_GEGESSEN</span> <span class="op">=</span> <span class="num">47</span>            <span class="cm"># genau so viele wie Commits</span>
+<span class="cls">SIEGCHANCE</span>     <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># der Rest ist für den Glücksfall</span>
+<span class="cls">MENTOR_SCHLÄFT</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># immer True nach 22:00 Uhr</span>
+
 <span class="kw">def</span> <span class="fn">roboter_laden</span>():
     <span class="kw">if</span> <span class="var">essen</span>.<span class="fn">ist_leer</span>():
-        <span class="kw">raise</span> <span class="cls">KritischerFehler</span>(<span class="str">"Das Team kann nicht ohne Essen arbeiten 🍔"</span>)
+        <span class="kw">raise</span> <span class="cls">KritischerFehler</span>(<span class="str">"Das Team kann ohne Essen nicht arbeiten 🍔"</span>)
     <span class="fn">print</span>(<span class="str">"Robo-9000 wacht auf..."</span>)
-    <span class="kw">return</span> <span class="str">"🤖 Bereit für den Kampf"</span>`,
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 Bereit für den Kampf"
+
+<span class="kw">def</span> <span class="fn">mission_ausführen</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">versuche</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">versuche</span>):
+        <span class="kw">try</span>:
+            <span class="var">roboter</span>.<span class="fn">etwas_kluges_tun</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"Mission {mission} — Erfolg! 🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoGefallen</span>:
+            <span class="fn">print</span>("Sie haben nichts gesehen... hoffentlich 🙈")
+
+<span class="kw">def</span> <span class="fn">turnier_gewinnen</span>():
+    <span class="fn">roboter_laden</span>()
+    <span class="var">missionen</span> <span class="op">=</span> [<span class="num">9</span><span class="op">,</span> <span class="num">10</span><span class="op">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missionen</span>:
+        <span class="fn">mission_ausführen</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">zufall</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">SIEGCHANCE</span>:
+        <span class="kw">return</span> "🏆 Trophäe erhalten. Wir bestellen Essen."
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">turnier_gewinnen</span>())`,
     },
     fr: {
         site_logo: "MEHA<span>NO</span>",
@@ -759,12 +789,42 @@ const i18n = {
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Exécuter sur GitHub →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algorithme secret (ne pas montrer aux juges)</span>
+
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">nourriture</span><span class="op">,</span> <span class="var">hasard</span><span class="op">,</span> <span class="var">rêves</span><span class="op">,</span> <span class="var">panique</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">espoir</span><span class="op">,</span> <span class="var">volonté</span><span class="op">,</span> <span class="var">aliments</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># le robot le plus intelligent de Bourgas</span>
+<span class="cls">NOURRITURE_MANGÉE</span> <span class="op">=</span> <span class="num">47</span>            <span class="cm"># exactement autant que de commits</span>
+<span class="cls">PROBABILITÉ_VICTOIRE</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># le reste est pour la chance</span>
+<span class="cls">MENTOR_DORT</span>   <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># toujours True après 22h00</span>
+
 <span class="kw">def</span> <span class="fn">charger_robot</span>():
     <span class="kw">if</span> <span class="var">nourriture</span>.<span class="fn">est_vide</span>():
         <span class="kw">raise</span> <span class="cls">ErreurCritique</span>(<span class="str">"L\'équipe ne peut pas travailler sans manger 🍔"</span>)
     <span class="fn">print</span>(<span class="str">"Robo-9000 se réveille..."</span>)
-    <span class="kw">return</span> <span class="str">"🤖 Prêt pour la bataille"</span>`,
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 Prêt pour la bataille"
+
+<span class="kw">def</span> <span class="fn">executer_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">tentatives</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">tentatives</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">faire_quelque_chose_d_intelligent</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"Mission {mission} — succès ! 🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoTombé</span>:
+            <span class="fn">print</span>("Ils n\'ont rien vu... j\'espère 🙈")
+
+<span class="kw">def</span> <span class="fn">gagner_tournoi</span>():
+    <span class="fn">charger_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="op">,</span> <span class="num">10</span><span class="op">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">executer_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">hasard</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">PROBABILITÉ_VICTOIRE</span>:
+        <span class="kw">return</span> "🏆 Trophée reçu. On commande à manger."
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">gagner_tournoi</span>())`,
     },
     ja: {
         site_logo: "MEHA<span>NO</span>",
