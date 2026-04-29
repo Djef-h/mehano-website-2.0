@@ -597,7 +597,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // ─── FLOATING LANGUAGE SWITCHER FAB ───
-(function () {
+function initLangFab() {
     const fabBtn = document.getElementById('langFabBtn');
     const fabPanel = document.getElementById('langFabPanel');
     if (!fabBtn || !fabPanel) return;
@@ -650,4 +650,11 @@ reveals.forEach(el => observer.observe(el));
     fabPanel.querySelectorAll('.lang-fab-item').forEach(i => {
         i.classList.toggle('active', i.dataset.lang === initLang);
     });
-})();
+}
+
+// Ensure both initial load and DOM ready are handled
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLangFab);
+} else {
+    initLangFab();
+}
