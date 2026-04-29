@@ -893,18 +893,6 @@ a.link-chip:hover {
     box-shadow: 0 8px 20px rgba(0, 87, 255, 0.4);
 }
 
-/* Add external link icon to clickable buttons */
-a.link-chip::after {
-    content: '↗';
-    font-size: 0.9rem;
-    opacity: 0.7;
-    transition: transform 0.3s;
-}
-
-a.link-chip:hover::after {
-    transform: translate(2px, -2px);
-    opacity: 1;
-}
 
 /* Static label state */
 span.link-chip {
