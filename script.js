@@ -268,6 +268,45 @@ const i18n = {
         name_boyana: "Μπογιάνα Γεωργίεβα", name_nikola: "Νικόλα Τσάνεφ", name_djefer: "Τζεφέρ Χότζοφ",
         name_boris: "Μπόρις Τσάρεφ", name_deyvid: "Ντέιβιντ Ζελιάζκοφ", name_danail: "Δαναήλ Χίτροφ",
         name_ivan: "Ιβάν Πασόφ", name_dilyan: "Ντιλιάν Γιορντάνοφ", name_kristian: "Κριστιγιάν Πετκόφ",
+        code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
+        code_action: "▶ Εκτέλεση στο GitHub →",
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Μυστικός αλγόριθμος (μην τον δείξετε στους κριτές)</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># το πιο έξυπνο ρομπότ</span>
+<span class="cls">FOOD_EATEN</span>    <span class="op">=</span> <span class="num">47</span>            <span class="cm"># όσα και τα commits</span>
+<span class="cls">WIN_PROBABILITY</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># το υπόλοιπο είναι για τύχη</span>
+<span class="cls">MENTOR_SLEEPING</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># πάντα True μετά τις 10 μ.μ.</span>
+
+<span class="kw">def</span> <span class="fn">charge_robot</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>("Η ομάδα δεν μπορεί να δουλέψει χωρίς φαγητό 🍔")
+    <span class="fn">print</span>("Το Robo-9000 ξυπνάει...")
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 Έτοιμο για μάχη"
+
+<span class="kw">def</span> <span class="fn">run_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">attempts</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"Αποστολή {mission} — επιτυχία! 🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
+            <span class="fn">print</span>("Δεν είδαν τίποτα... ελπίζω 🙈")
+
+<span class="kw">def</span> <span class="fn">win_tournament</span>():
+    <span class="fn">charge_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="op">,</span> <span class="num">10</span><span class="op">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">run_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">WIN_PROBABILITY</span>:
+        <span class="kw">return</span> "🏆 Το τρόπαιο λήφθηκε. Παραγγέλνουμε φαγητό."
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     zh: {
         site_logo: "MEHA<span>NO</span>",
@@ -331,7 +370,46 @@ const i18n = {
         footer_text: "© 2025 Mehano。保留所有权利。",
         name_boyana: "博亚娜·格奥尔基耶娃", name_nikola: "尼古拉·查内夫", name_djefer: "杰费尔·霍乔夫",
         name_boris: "鲍里斯·察列夫", name_deyvid: "戴维·热利亚兹科夫", name_danail: "丹尼尔·希特罗夫",
-        name_ivan: "伊万·帕绍夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂扬·佩特科夫",
+        name_ivan: "伊万·帕肖夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂扬·佩特科夫",
+        code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
+        code_action: "▶ 在 GitHub 上运行 →",
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — 秘密算法（不要给评委看）</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># 布尔加斯最聪明的机器人</span>
+<span class="cls">FOOD_EATEN</span>    <span class="op">=</span> <span class="num">47</span>            <span class="cm"># 和提交次数一样多</span>
+<span class="cls">WIN_PROBABILITY</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># 剩下的是为了运气</span>
+<span class="cls">MENTOR_SLEEPING</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># 晚上10点后总是True</span>
+
+<span class="kw">def</span> <span class="fn">charge_robot</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>("没有食物团队无法工作 🍔")
+    <span class="fn">print</span>("Robo-9000 正在苏醒...")
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 准备战斗"
+
+<span class="kw">def</span> <span class="fn">run_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">attempts</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"任务 {mission} — 成功！🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
+            <span class="fn">print</span>("他们没看到... 希望如此 🙈")
+
+<span class="kw">def</span> <span class="fn">win_tournament</span>():
+    <span class="fn">charge_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="op">,</span> <span class="num">10</span><span class="op">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">run_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">WIN_PROBABILITY</span>:
+        <span class="kw">return</span> "🏆 获得奖杯。订餐吧。"
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     pt: {
         site_logo: "MEHA<span>NO</span>",
@@ -396,6 +474,46 @@ const i18n = {
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
+        code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
+        code_action: "▶ Executar no GitHub →",
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algoritmo secreto (não mostre aos juízes)</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># o robô mais inteligente de Burgas</span>
+<span class="cls">FOOD_EATEN</span>    <span class="op">=</span> <span class="num">47</span>            <span class="cm"># exatamente tantos como commits</span>
+<span class="cls">WIN_PROBABILITY</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># o resto é por sorte</span>
+<span class="cls">MENTOR_SLEEPING</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># sempre True depois das 22:00</span>
+
+<span class="kw">def</span> <span class="fn">charge_robot</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>("A equipe não pode trabalhar sem comida 🍔")
+    <span class="fn">print</span>("Robo-9000 está acordando...")
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 Pronto para a batalha"
+
+<span class="kw">def</span> <span class="fn">run_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">attempts</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"Missão {mission} — sucesso! 🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
+            <span class="fn">print</span>("Eles não viram... espero 🙈")
+
+<span class="kw">def</span> <span class="fn">win_tournament</span>():
+    <span class="fn">charge_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="num">,</span> <span class="num">10</span><span class="num">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">run_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">WIN_PROBABILITY</span>:
+        <span class="kw">return</span> "🏆 Troféu recebido. Pedindo comida."
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
+
     },
     es: {
         site_logo: "MEHA<span>NO</span>",
@@ -460,6 +578,46 @@ const i18n = {
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
+        code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
+        code_action: "▶ Ejecutar en GitHub →",
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algoritmo secreto (no mostrar a los jueces)</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># el robot más inteligente de Burgas</span>
+<span class="cls">FOOD_EATEN</span>    <span class="op">=</span> <span class="num">47</span>            <span class="cm"># exactamente tantos como commits</span>
+<span class="cls">WIN_PROBABILITY</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># el resto es por suerte</span>
+<span class="cls">MENTOR_SLEEPING</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># siempre True después de las 22:00</span>
+
+<span class="kw">def</span> <span class="fn">charge_robot</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>("El equipo no puede trabajar sin comida 🍔")
+    <span class="fn">print</span>("Robo-9000 se está despertando...")
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 Listo para la batalla"
+
+<span class="kw">def</span> <span class="fn">run_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">attempts</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"Misión {mission} — ¡éxito! 🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
+            <span class="fn">print</span>("No vieron nada... espero 🙈")
+
+<span class="kw">def</span> <span class="fn">win_tournament</span>():
+    <span class="fn">charge_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="num">,</span> <span class="num">10</span><span class="num">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">run_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">WIN_PROBABILITY</span>:
+        <span class="kw">return</span> "🏆 Trofeo recibido. Pidiendo comida."
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
+
     },
 
         de: {
@@ -671,6 +829,46 @@ const i18n = {
         name_boyana: "ボヤナ・ゲオルギエワ", name_nikola: "ニコラ・チャネフ", name_djefer: "ジェフェル・ホジョフ",
         name_boris: "ボリス・ツァレフ", name_deyvid: "デイビッド・ゼリャズコフ", name_danail: "ダナイル・ヒトロフ",
         name_ivan: "イヴァン・パショフ", name_dilyan: "ディリャン・ヨルダノフ", name_kristian: "クリスティヤン・ペトコフ",
+        code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
+        code_action: "▶ GitHubで実行 →",
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — 秘密のアルゴリズム（審査員に見せないでください）</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
+
+<span class="cls">ROBOT</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># ブルガスで最もスマートなロボット</span>
+<span class="cls">FOOD_EATEN</span>    <span class="op">=</span> <span class="num">47</span>            <span class="cm"># コミット数と同じ</span>
+<span class="cls">WIN_PROBABILITY</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># 残りは運のため</span>
+<span class="cls">MENTOR_SLEEPING</span> <span class="kw">True</span>          <span class="cm"># 午後10時以降は常にTrue</span>
+
+<span class="kw">def</span> <span class="fn">charge_robot</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>("食べ物がないとチームは働けません 🍔")
+    <span class="fn">print</span>("Robo-9000 が目覚めています...")
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> "🤖 戦いの準備完了"
+
+<span class="kw">def</span> <span class="fn">run_mission</span>(<span class="var">mission</span><span class="op">,</span> <span class="var">attempts</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
+        <span class="kw">try</span>:
+            <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
+            <span class="fn">print</span>(f"ミッション {mission} — 成功！🎉")
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
+            <span class="fn">print</span>("彼らは見ていなかった...願わくば 🙈")
+
+<span class="kw">def</span> <span class="fn">win_tournament</span>():
+    <span class="fn">charge_robot</span>()
+    <span class="var">missions</span> <span class="op">=</span> [<span class="num">9</span><span class="num">,</span> <span class="num">10</span><span class="num">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">mission</span> <span class="kw">in</span> <span class="var">missions</span>:
+        <span class="fn">run_mission</span>(<span class="var">mission</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">WIN_PROBABILITY</span>:
+        <span class="kw">return</span> "🏆 トロフィー獲得。食べ物を注文します。"
+    <span class="kw">else</span>:
+        <span class="kw">return</span> "😤"
+
+<span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
+
     }
 };
 
