@@ -551,17 +551,6 @@ function applyLang(lang) {
 // Initial application
 document.addEventListener('DOMContentLoaded', () => {
     applyLang(currentLang);
-    
-    // Hide preloader since hero 3D model is removed
-    const siteLoader = document.getElementById('site-loader');
-    if (siteLoader) {
-        setTimeout(() => {
-            siteLoader.classList.add('fade-out');
-            setTimeout(() => {
-                siteLoader.style.display = 'none';
-            }, 800);
-        }, 500);
-    }
 });
 
 // Lang selector logic
