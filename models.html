@@ -30,7 +30,7 @@
         }
 
         .model-sidebar {
-            background: rgba(255, 255, 255, 0.02);
+            background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: 24px;
@@ -42,8 +42,8 @@
         }
 
         .model-option {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--bg);
+            border: 1px solid var(--border);
             padding: 14px 20px;
             border-radius: 16px;
             color: var(--text2);
@@ -58,8 +58,8 @@
         }
 
         .model-option:hover {
-            background: rgba(255, 255, 255, 0.06);
-            color: #fff;
+            background: var(--surface2);
+            color: var(--accent2);
         }
 
         .model-option.active {
@@ -71,13 +71,13 @@
 
         .viewer-container {
             flex: 1;
-            background: rgba(255, 255, 255, 0.02);
+            background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             position: relative;
             overflow: hidden;
             min-height: 600px;
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow);
         }
 
         #model-canvas {
@@ -97,25 +97,28 @@
         }
 
         .viewer-btn {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff;
-            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
             border-radius: 99px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            color: var(--text);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
             cursor: pointer;
-            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s;
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: var(--shadow);
         }
 
         .viewer-btn:hover {
-            background: var(--accent);
-            border-color: transparent;
+            background: #fff;
             transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--accent2);
         }
 
         .viewer-info {
@@ -123,36 +126,39 @@
             top: 30px;
             left: 30px;
             max-width: 300px;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             padding: 20px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
             pointer-events: none;
         }
 
         .viewer-info h3 {
             font-size: 1.1rem;
             margin-bottom: 8px;
-            color: #fff;
+            color: var(--text);
         }
 
         .viewer-info p {
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text2);
             line-height: 1.5;
         }
 
-        #model-loader-overlay {
+        .loading-overlay {
             position: absolute;
-            inset: 0;
-            background: #050505;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 100;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.5s;
         }
 
         #model-loader-overlay.fade-out {
