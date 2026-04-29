@@ -595,3 +595,59 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
+
+// ─── FLOATING LANGUAGE SWITCHER FAB ───
+(function () {
+    const fabBtn = document.getElementById('langFabBtn');
+    const fabPanel = document.getElementById('langFabPanel');
+    if (!fabBtn || !fabPanel) return;
+
+    // Toggle panel
+    fabBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fabPanel.classList.toggle('open');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#langFab')) {
+            fabPanel.classList.remove('open');
+        }
+    });
+
+    // Handle flag clicks
+    fabPanel.querySelectorAll('.lang-fab-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const lang = item.dataset.lang;
+            applyLang(lang);
+
+            // Update active state in FAB
+            fabPanel.querySelectorAll('.lang-fab-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            // Also sync the inline selectors in nav
+            document.querySelectorAll('.lang-item').forEach(i => {
+                i.classList.toggle('active', i.dataset.lang === lang);
+            });
+
+            fabPanel.classList.remove('open');
+        });
+    });
+
+    // Sync FAB active state when inline selector is used
+    document.querySelectorAll('.lang-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const lang = item.dataset.lang;
+            fabPanel.querySelectorAll('.lang-fab-item').forEach(i => {
+                i.classList.toggle('active', i.dataset.lang === lang);
+            });
+        });
+    });
+
+    // Set initial active based on current lang
+    const initLang = localStorage.getItem('lang') || 'en';
+    fabPanel.querySelectorAll('.lang-fab-item').forEach(i => {
+        i.classList.toggle('active', i.dataset.lang === initLang);
+    });
+})();
