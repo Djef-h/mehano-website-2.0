@@ -1613,51 +1613,157 @@ span.link-chip {
     }
 
     .section-title {
-        font-size: 2.2rem !important;
-        line-height: 1.1;
+        font-size: 2rem !important;
+        line-height: 1.15;
     }
 
     .section-desc {
-        font-size: 1.05rem;
-        margin-bottom: 40px;
+        font-size: 1rem;
+        margin-bottom: 36px;
     }
 
     #hero {
-        padding: 120px 20px 60px;
+        padding: 100px 20px 60px;
+        min-height: 100svh;
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
     }
 
     .hero-stats {
-        gap: 24px;
+        gap: 32px;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     section {
         padding: 60px 20px;
     }
 
+    /* ── Brief sections on index ── */
+    #brief-about,
+    #brief-project {
+        padding: 64px 20px !important;
+    }
+
     .about-card {
         max-width: none;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+    /* ── Stats row stacks on mobile ── */
+    .stats-row {
+        flex-direction: column;
+        border-radius: var(--radius);
     }
 
+    .stat-block {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 16px;
+    }
+
+    .stat-block:last-child {
+        border-bottom: none;
+    }
+
+    /* ── Partner card stacks ── */
+    .partner-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    /* ── Location card stacks ── */
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .location-info {
+        padding: 28px 24px;
+    }
+
+    .location-map {
+        min-height: 240px;
+    }
+
+    /* ── Contact grid: 1 column ── */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-card {
+        padding: 24px 20px;
+    }
+
+    /* ── Team grid: 2 columns ── */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* ── Project body ── */
+    .project-body {
+        padding: 24px 20px;
+    }
+
+    .project-footer {
+        padding: 20px;
+    }
+
+    /* ── Footer ── */
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 32px;
+        gap: 24px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    /* ── Lang FAB: smaller on mobile ── */
+    .lang-fab {
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .lang-fab-btn {
+        width: 44px;
+        height: 44px;
     }
 }
 
-@media (max-width: 600px) {
+/* ── Small phones (≤ 480px) ── */
+@media (max-width: 480px) {
     .hero-title {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 11vw, 2.8rem);
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .hero-stat-num {
+        font-size: 1.6rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.65rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+
+    .section-desc {
+        font-size: 0.92rem;
     }
 
     .team-grid {
@@ -1668,7 +1774,52 @@ span.link-chip {
         grid-template-columns: 1fr 1fr;
     }
 
-    .location-info {
-        padding: 28px 24px;
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-card,
+    .about-card {
+        padding: 28px 20px;
+    }
+
+    section {
+        padding: 48px 16px;
+    }
+
+    #brief-about,
+    #brief-project {
+        padding: 48px 16px !important;
+    }
+
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .partner-logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .code-body {
+        padding: 16px 14px;
+    }
+
+    .code-body pre {
+        font-size: 0.72rem;
+    }
+
+    nav {
+        top: 8px;
+        padding: 0 10px;
+    }
+
+    .nav-pill {
+        padding: 6px 12px;
     }
 }
