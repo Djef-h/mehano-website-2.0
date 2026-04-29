@@ -551,6 +551,17 @@ function applyLang(lang) {
 // Initial application
 document.addEventListener('DOMContentLoaded', () => {
     applyLang(currentLang);
+    
+    // Hide preloader since hero 3D model is removed
+    const siteLoader = document.getElementById('site-loader');
+    if (siteLoader) {
+        setTimeout(() => {
+            siteLoader.classList.add('fade-out');
+            setTimeout(() => {
+                siteLoader.style.display = 'none';
+            }, 800);
+        }, 500);
+    }
 });
 
 // Lang selector logic
@@ -560,6 +571,7 @@ document.querySelectorAll('.lang-item').forEach(item => {
         applyLang(item.dataset.lang);
     });
 });
+
 // Hamburger
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -594,145 +606,3 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
-
-// ─── THREE.JS LEGO ROBOT ───
-(function () {
-    const canvas = document.getElementById('hero-canvas');
-    if (!canvas) return;
-
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.shadowMap.enabled = true;
-    renderer.outputEncoding = THREE.sRGBEncoding;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-    camera.position.set(0, 1.5, 7);
-
-    function resize() {
-        const w = canvas.clientWidth, h = canvas.clientHeight;
-        renderer.setSize(w, h, false);
-        camera.aspect = w / h;
-        camera.updateProjectionMatrix();
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    // Lights
-    scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-    scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 0.6));
-    
-    const dir = new THREE.DirectionalLight(0xffffff, 1.0);
-    dir.position.set(5, 5, 10);
-    dir.castShadow = true;
-    dir.shadow.mapSize.width = 1024;
-    dir.shadow.mapSize.height = 1024;
-    scene.add(dir);
-    
-    const fill = new THREE.DirectionalLight(0x0057ff, 0.3);
-    fill.position.set(-5, 2, -5);
-    scene.add(fill);
-
-    // Materials
-    const bodyMat = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.2, metalness: 0.7 });
-    const accentMat = new THREE.MeshStandardMaterial({ color: 0x0057ff, roughness: 0.3, metalness: 0.5 });
-    const lightMat = new THREE.MeshStandardMaterial({ color: 0x0057ff, emissive: 0x0057ff, emissiveIntensity: 0.8, roughness: 0.1 });
-    const greyMat = new THREE.MeshStandardMaterial({ color: 0x888880, roughness: 0.4, metalness: 0.5 });
-    const whiteMat = new THREE.MeshStandardMaterial({ color: 0xf0f0ed, roughness: 0.3, metalness: 0.2 });
-
-    const robot = new THREE.Group();
-    scene.add(robot);
-
-    const loader = new THREE.GLTFLoader();
-    console.log("Starting GLTF load...");
-    loader.load('./assets/Robot.glb', (gltf) => {
-        console.log("Model loaded successfully!");
-        const obj = gltf.scene;
-        
-        obj.traverse((child) => {
-            if (child.isMesh) {
-                child.castShadow = true;
-                child.receiveShadow = true;
-            }
-        });
-
-        const boundingBox = new THREE.Box3().setFromObject(obj);
-        const center = boundingBox.getCenter(new THREE.Vector3());
-        const size = boundingBox.getSize(new THREE.Vector3());
-        console.log("Model dimensions:", size);
-
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 3.2 / maxDim;
-        
-        obj.scale.setScalar(scale);
-        obj.position.sub(center.multiplyScalar(scale));
-        
-        // Initial presentation rotation
-        obj.rotation.y = Math.PI / 4; 
-        
-        robot.add(obj);
-        
-        // Hide preloader
-        const siteLoader = document.getElementById('site-loader');
-        if (siteLoader) {
-            siteLoader.classList.add('fade-out');
-            setTimeout(() => {
-                siteLoader.style.display = 'none';
-            }, 800);
-        }
-    }, 
-    (xhr) => { 
-        if (xhr.lengthComputable) {
-            const percent = Math.round((xhr.loaded / xhr.total) * 100);
-            const bar = document.getElementById('loader-progress');
-            if (bar) bar.style.width = percent + '%';
-        }
-    },
-    (error) => { console.error('GLTF Load Error:', error); });
-
-    robot.position.y = 0.3;
-    scene.add(robot);
-
-    // Floating particles
-    const partGeo = new THREE.BufferGeometry();
-    const count = 80;
-    const pos = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-        pos[i * 3] = (Math.random() - 0.5) * 6;
-        pos[i * 3 + 1] = (Math.random() - 0.5) * 6;
-        pos[i * 3 + 2] = (Math.random() - 0.5) * 4;
-    }
-    partGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-    const partMat = new THREE.PointsMaterial({ color: 0xcccccc, size: 0.04, transparent: true, opacity: 0.5 });
-    scene.add(new THREE.Points(partGeo, partMat));
-
-    // Controls
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.enableZoom = true;
-    controls.enablePan = false;
-    controls.autoRotate = false;
-    controls.target.set(0, 0, 0);
-
-    let isInteracting = false;
-    controls.addEventListener('start', () => { isInteracting = true; });
-
-    let t = 0;
-    function animate() {
-        requestAnimationFrame(animate);
-        t += 0.012;
-
-        if (!isInteracting) {
-            robot.rotation.y += 0.008;
-        }
-
-        controls.update();
-
-        // Bob up/down
-        robot.position.y = 0.3 + Math.sin(t) * 0.08;
-
-        renderer.render(scene, camera);
-    }
-    animate();
-})();
