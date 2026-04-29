@@ -1535,6 +1535,19 @@ span.link-chip {
     color: var(--accent);
 }
 
+.footer-social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1) opacity(0.6);
+}
+
+.footer-links a:hover .footer-social-icon {
+    transform: scale(1.15) translateY(-2px);
+    filter: brightness(1) invert(0) opacity(1);
+}
+
 .contact-card h4 {
     font-size: 0.78rem;
     font-weight: 700;
