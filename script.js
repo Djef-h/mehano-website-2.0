@@ -607,7 +607,7 @@ const i18n = {
         <span class="kw">raise</span> <span class="cls">ErreurCritique</span>(<span class="str">"L\'équipe ne peut pas travailler sans manger 🍔"</span>)
     <span class="fn">print</span>(<span class="str">"Robo-9000 se réveille..."</span>)
     <span class="kw">return</span> <span class="str">"🤖 Prêt pour la bataille"</span>`,
-    },,
+    },
     ja: {
         site_logo: "MEHA<span>NO</span>",
         nav_home: "ホーム",
