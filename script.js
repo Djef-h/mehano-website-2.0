@@ -1057,7 +1057,7 @@ function initLangFab() {
     });
 
     // Set initial active based on current lang
-    const initLang = localStorage.getItem('lang') || 'en';
+    const initLang = localStorage.getItem('mehano_lang') || 'en';
     fabPanel.querySelectorAll('.lang-fab-item').forEach(i => {
         i.classList.toggle('active', i.dataset.lang === initLang);
     });
