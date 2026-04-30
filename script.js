@@ -1,6 +1,10 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         site_logo: "Механо",
         nav_home: "Начало",
@@ -161,6 +165,10 @@ const i18n = {
     },
     
     en: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
 
         site_logo: "Mehano",
@@ -322,6 +330,10 @@ const i18n = {
     },
     
     el: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
         site_logo: "Μεχανο",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
@@ -431,6 +443,10 @@ const i18n = {
 
     },
     zh: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         site_logo: "Mehano",
         nav_home: "首页",
@@ -591,6 +607,10 @@ const i18n = {
     },
     
     pt: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         gr_rule_num: "REGRA",
         site_logo: "Mehano",
@@ -752,6 +772,10 @@ const i18n = {
     },
     
     es: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         gr_rule_num: "REGLA",
         site_logo: "Mehano",
@@ -914,6 +938,10 @@ const i18n = {
     
 
         de: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         gr_rule_num: "REGEL",
         site_logo: "Mehano",
@@ -1074,6 +1102,10 @@ const i18n = {
     },
     
     fr: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         gr_rule_num: "RÈGLE",
         site_logo: "Mehano",
@@ -1234,6 +1266,10 @@ const i18n = {
     },
     
     ja: {
+        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
+        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
+        instr_robot: "{new_keys_base['instr_robot'][lang]}",
+        instr_run: "{new_keys_base['instr_run'][lang]}",
 
         gr_rule_num: "ルール",
         site_logo: "Mehano",

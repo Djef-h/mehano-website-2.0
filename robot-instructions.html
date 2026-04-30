@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="robot_instr_title">Робот Инструкции - Mehano</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .instr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+
+        .instr-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .instr-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .instr-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .instr-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .instr-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(var(--primary-rgb), 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .instr-card:hover .instr-icon {
+            background: var(--primary);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .instr-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--primary);
+            transition: 0.3s;
+        }
+
+        .instr-card:hover .instr-icon svg {
+            stroke: white;
+        }
+
+        .instr-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .instr-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .instr-btn {
+            margin-top: auto;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .instr-btn svg {
+            transition: 0.3s;
+        }
+
+        .instr-card:hover .instr-btn svg {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" data-i18n-html="site_logo">МЕΧΑ<span>НО</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Начало</a></li>
+                <li><a href="about.html" data-i18n="nav_about">За нас</a></li>
+                <li><a href="code.html" data-i18n="nav_code">Код</a></li>
+                <li><a href="project.html" data-i18n="nav_project">Проект</a></li>
+                <li class="active"><a href="docs.html" data-i18n="nav_docs">Документи</a></li>
+                <li><a href="team.html" data-i18n="nav_team">Отбор</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-btn">
+                        <span data-i18n="nav_more">Още</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-inner">
+                            <a href="contact.html" data-i18n="nav_location">Мяστο</a>
+                            <a href="contact.html" data-i18n="nav_contact">Контакт</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" data-i18n="nav_home">Начало</a>
+        <a href="about.html" data-i18n="nav_about">За нас</a>
+        <a href="code.html" data-i18n="nav_code">Код</a>
+        <a href="project.html" data-i18n="nav_project">Проект</a>
+        <a href="docs.html" data-i18n="nav_docs">Документи</a>
+        <a href="team.html" data-i18n="nav_team">Отбор</a>
+        <a href="contact.html" data-i18n="nav_location">Мяστο</a>
+        <a href="contact.html" data-i18n="nav_contact">Контакт</a>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <section>
+            <div class="container">
+                <div class="reveal">
+                    <a href="docs.html" class="gr-back" style="margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary); font-weight: 600;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                        <span data-i18n="back_to_docs">← Назад към документите</span>
+                    </a>
+                    <h1 class="section-title" data-i18n="robot_instr_title">Инструкции на робоτα</h1>
+                    <p class="section-desc" data-i18n="robot_instr_desc">Подробни PDF инструкции за сглобяване на нашия робот и приставки.</p>
+                </div>
+
+                <div class="instr-grid" id="instrGrid">
+                    <!-- Base Robot -->
+                    <a href="assets/pristavkistroez/Robot.pdf" target="_blank" class="instr-card reveal">
+                        <div class="instr-badge">PDF Document</div>
+                        <div class="instr-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14.5 2 14.5 7 20 7"/></svg>
+                        </div>
+                        <div class="instr-name" data-i18n="instr_robot">Основен робот</div>
+                        <div class="instr-btn">
+                            <span data-i18n="doc_open">Отвори</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                        </div>
+                    </a>
+
+                    <!-- Runs 1-7 generated by logic or hardcoded -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-logo" data-i18n-html="site_logo">МЕΧΑ<span>НО</span></div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/share/14fhyT4UMTZ/" target="_blank" aria-label="Facebook"><img src="assets/facebook_icon.png" alt="Facebook" class="footer-social-icon"></a>
+                    <a href="https://www.instagram.com/team.mehano?igsh=MXFobXhndnludW91OA==" target="_blank" aria-label="Instagram"><img src="assets/Instagram_icon.png" alt="Instagram" class="footer-social-icon"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING LANGUAGE SWITCHER -->
+    <div class="lang-fab" id="langFab">
+        <div class="lang-fab-panel" id="langFabPanel">
+            <!-- Flags here -->
+        </div>
+        <button class="lang-fab-btn" id="langFabBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('instrGrid');
+            const lang = localStorage.getItem('mehano_lang') || 'bg';
+            const runLabel = (i18n[lang] && i18n[lang].instr_run) || (i18n['bg'].instr_run);
+            const openLabel = (i18n[lang] && i18n[lang].doc_open) || (i18n['bg'].doc_open);
+
+            for (let i = 1; i <= 7; i++) {
+                const card = document.createElement('a');
+                card.href = `assets/pristavkistroez/Run_${i}.pdf`;
+                card.target = '_blank';
+                card.className = 'instr-card reveal';
+                card.style.transitionDelay = (i * 0.1) + 's';
+                card.innerHTML = `
+                    <div class="instr-badge">PDF Document</div>
+                    <div class="instr-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14.5 2 14.5 7 20 7"/></svg>
+                    </div>
+                    <div class="instr-name">${runLabel} ${i}</div>
+                    <div class="instr-btn">
+                        <span>${openLabel}</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+            
+            if (window.initReveal) window.initReveal();
+        });
+    </script>
+</body>
+
+</html>
