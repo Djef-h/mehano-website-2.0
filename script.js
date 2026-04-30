@@ -387,6 +387,43 @@ const i18n = {
         code_desc: "Εξερευνήστε τον κώδικα Python που κινεί το ρομπότ μας.",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Εκτέλεση στο GitHub →",
+        code_snippet: `<span class="cm"># ⚙️ ΜΕΧΑΝΟ v2.0 Μυστικός Αλγόριθμος (μην τον δείξετε στους κριτές)</span>
+
+<span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
+<span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">ελπίδα</span><span class="op">,</span> <span class="var">θέληση</span><span class="op">,</span> <span class="var">φαγητό</span>
+
+<span class="cls">ΡΟΜΠΟΤ</span>         <span class="op">=</span> <span class="str">"Robo"</span>   <span class="cm"># το πιο έξυπνο ρομπότ στο Μπουργκάς</span>
+<span class="cls">ΦΑΓΗΤΟ_ΚΑΤΑΝΑΛΩΘΗΚΕ</span> <span class="op">=</span> <span class="num">47</span>            <span class="cm"># ακριβώς όσο και τα commits</span>
+<span class="cls">ΠΙΘΑΝΟΤΗΤΑ_ΝΙΚΗΣ</span> <span class="op">=</span> <span class="num">0.999</span>    <span class="cm"># το υπόλοιπο είναι για την τύχη</span>
+<span class="cls">ΜΕΝΤΟΡΑΣ_ΚΟΙΜΑΤΑΙ</span> <span class="op">=</span> <span class="kw">True</span>          <span class="cm"># πάντα True μετά τις 10 μ.μ.</span>
+
+<span class="kw">def</span> <span class="fn">φόρτιση_ρομπότ</span>():
+    <span class="kw">if</span> <span class="var">food</span>.<span class="fn">is_empty</span>():
+        <span class="kw">raise</span> <span class="cls">CriticalError</span>(<span class="str">"Η ομάδα δεν μπορεί να λειτουργήσει χωρίς φαγητό 🍔"</span>)
+    <span class="fn">print</span>(<span class="str">"Το Robo-9000 ξυπνάει..."</span>)
+    <span class="var">spike</span>.<span class="var">motor_a</span>.<span class="fn">run</span>(<span class="var">speed</span><span class="op">=</span><span class="num">100</span>)
+    <span class="kw">return</span> <span class="str">"🤖 Έτοιμο για μάχη"</span>
+
+<span class="kw">def</span> <span class="fn">εκτέλεση_αποστολής</span>(<span class="var">αποστολή</span><span class="op">,</span> <span class="var">προσπάθειες</span><span class="op">=</span><span class="num">3</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">προσπάθειες</span>):
+        <span class="kw">try</span>:
+            <span class="var">ρομπότ</span>.<span class="fn">κάνε_κάτι_έξυπνο</span>(<span class="var">αποστολή</span>)
+            <span class="fn">print</span>(<span class="str">f"Αποστολή {αποστολή} επιτυχία! 🎉"</span>)
+            <span class="kw">break</span>
+        <span class="kw">except</span> <span class="cls">LegoΈπεσε</span>:
+            <span class="fn">print</span>(<span class="str">"Δεν είδαν... ελπίζω 🙈"</span>)
+
+<span class="kw">def</span> <span class="fn">νίκη_σε_τουρνουά</span>():
+    <span class="fn">φόρτιση_ρομπότ</span>()
+    <span class="var">αποστολές</span> <span class="op">=</span> [<span class="num">9</span><span class="op">,</span> <span class="num">10</span><span class="op">,</span> <span class="num">13</span>]
+    <span class="kw">for</span> <span class="var">αποστολή</span> <span class="kw">in</span> <span class="var">αποστολές</span>:
+        <span class="fn">εκτέλεση_αποστολής</span>(<span class="var">αποστολή</span>)
+    <span class="kw">if</span> <span class="var">random</span>.<span class="fn">random</span>() <span class="op">&lt;</span> <span class="cls">ΠΙΘΑΝΟΤΗΤΑ_ΝΙΚΗΣ</span>:
+        <span class="kw">return</span> <span class="str">"🏆 Τρόπαιο ελήφθη. Παραγγέλνουμε φαγητό."</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="str">"😤"</span>
+
+<span class="fn">print</span>(<span class="fn">νίκη_σε_τουρνουά</span>())`,
         project_label: "Έργο", project_title: "Καινοτόμο Έργο",
         project_name: "ASOA 2.0 - Αυτοματοποιημένο Σύστημα Αφαλάτωσης",
         project_desc: "Μια λύση που κάνει τον κόσμο καλύτερο μέσω της τεχνολογίας και της παρακολούθησης IoT.",
