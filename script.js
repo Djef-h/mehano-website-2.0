@@ -1,7 +1,9 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
+
         site_logo: "Механо",
+        nav_home: "Начало",
         nav_about: "За нас", nav_code: "Код", nav_project: "Проект",
         nav_docs: "Документи", nav_team: "Отбор", nav_location: "Място", nav_contact: "Свържи се",
         nav_models: "3D Модели",
@@ -157,7 +159,9 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">спечели_турнира</span>())`,
     },
+    
     en: {
+
         site_logo: "Mehano",
         nav_home: "Home",
         nav_about: "About", nav_code: "Code", nav_project: "Project",
@@ -315,8 +319,9 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
+    
     el: {
-        gr_rule_num: "ΚΑΝΟΝΑΣ",
+gr_rule_num: "ΚΑΝΟΝΑΣ",
         site_logo: "Mehano",
         gr_rule_1: "Το ρομπότ έχει πάντα μια αυστηρά καθορισμένη αρχική θέση. Πρέπει να σχηματίζει μια ακριβή γωνία με ένα συγκεκριμένο τετράγωνο της βάσης για να διασφαλιστεί η σωστή τροχιά.",
         gr_rule_2: "Ποτέ δεν ξεκινάμε το ρομπότ σε κλίση. Μια σταθερή επιφάνεια κατά τη στιγμή της εκκίνησης είναι κρίσιμη για τη λειτουργία των αισθητήρων.",
@@ -455,7 +460,19 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
+        back_to_project: "← Πίσω στο έργο",
+        code_desc: "Εξερευνήστε τον κώδικα Python που κινεί το ρομπότ μας.",
+        code_label: "Κώδικας",
+        code_title: "Προγραμματισμός",
+        project_details_title: "Ερευνητικό Έργο",
+        project_doc_p2: "Η δεύτερη επίσκεψή μας στο μουσείο συνέπεσε με την 50ή επέτειο από την ανακάλυψη των χρυσών κοσμημάτων...",
+        project_doc_p3: "Το επόμενο βήμα μας ήταν μια συνάντηση με ειδικούς από το Κέντρο Υποβρύχιας Αρχαιολογίας...",
+        project_doc_p4: "Πριν καταλήξουμε στην τελική λύση, περάσαμε από ένα στάδιο όπου εξετάσαμε τη δημιουργία μιας προστατευτικής υδρογέλης...",
+        project_label: "Project",
+        project_name: "Automated Artifact Desalination System",
+    
     zh: {
+
         site_logo: "Mehano",
         nav_home: "首页",
         nav_about: "关于我们", nav_code: "代码", nav_project: "项目",
@@ -613,7 +630,9 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
+    
     pt: {
+
         gr_rule_num: "REGRA",
         site_logo: "Mehano",
         nav_home: "Início",
@@ -772,7 +791,9 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
 
     },
+    
     es: {
+
         gr_rule_num: "REGLA",
         site_logo: "Mehano",
         nav_home: "Inicio",
@@ -931,8 +952,10 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
 
     },
+    
 
         de: {
+
         gr_rule_num: "REGEL",
         site_logo: "Mehano",
         nav_home: "Startseite",
@@ -1090,7 +1113,9 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">turnier_gewinnen</span>())`,
     },
+    
     fr: {
+
         gr_rule_num: "RÈGLE",
         site_logo: "Mehano",
         nav_home: "Accueil",
@@ -1248,7 +1273,9 @@ const i18n = {
 
 <span class="fn">print</span>(<span class="fn">gagner_tournoi</span>())`,
     },
+    
     ja: {
+
         gr_rule_num: "ルール",
         site_logo: "Mehano",
         nav_home: "ホーム",
@@ -1406,7 +1433,8 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
 
     }
-};
+
+    };
 
 let currentLang = localStorage.getItem('mehano_lang') || 'en';
 

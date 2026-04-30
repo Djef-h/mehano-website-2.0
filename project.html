@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Механо</title>
+    <!-- Preload 3D model for faster loading -->
+    <link rel="preload" href="assets/project3dmodel.glb" as="fetch" crossorigin="anonymous">
     <!-- model-viewer for 3D GLB rendering -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <style>
@@ -182,6 +184,7 @@
                             <span class="project-model-hint">Drag &middot; Rotate &middot; Zoom</span>
                         </div>
                         <model-viewer
+                            fetchpriority="high"
                             src="assets/project3dmodel.glb"
                             alt="ASOA 2.0 automated artifact desalination system 3D model"
                             auto-rotate
