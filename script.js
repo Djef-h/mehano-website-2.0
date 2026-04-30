@@ -37,6 +37,8 @@ const i18n = {
         project_impact_label: "Въздействие",
         project_impact: "Съкращава времето за консервация с месеци, минимизира грешките и гарантира спасяването на световното подводно наследство.",
         project_docs: "📄 Документация", project_site: "🌐 Виж сайта",
+        project_details_title: "Научноизследователски проект",
+        back_to_project: "← Назад към проекта",
         docs_label: "Документи", docs_title: "Архив на отбора",
         docs_desc: "Цялата ни работа на едно място — открита и достъпна.",
         doc1: "Златните правила на Механо", doc2: "Инструкции на робота",
@@ -141,6 +143,8 @@ const i18n = {
         project_impact_label: "Impact",
         project_impact: "ASOA 2.0 reduces conservation time by months, minimizes errors and logistics costs, ensuring the preservation of underwater cultural heritage.",
         project_docs: "📄 Documentation", project_site: "🌐 Visit Site",
+        project_details_title: "Research Project Documentation",
+        back_to_project: "← Back to Project",
         docs_label: "Documents", docs_title: "Team Archive",
         docs_desc: "All our work in one place — open and accessible.",
         doc1: "Механо Golden Rules", doc2: "Robot Instructions",
@@ -245,6 +249,8 @@ const i18n = {
         project_impact_label: "Αντίκτυπος",
         project_impact: "Μειώνει τον χρόνο συντήρησης κατά μήνες και διασφαλίζει την πολιτιστική κληρονομιά.",
         project_docs: "📄 Τεκμηρίωση", project_site: "🌐 Επισκεφθείτε",
+        project_details_title: "Τεκμηρίωση Ερευνητικού Έργου",
+        back_to_project: "← Πίσω στο Έργο",
         docs_label: "Έγγραφα", docs_title: "Αρχείο Ομάδας",
         docs_desc: "Όλη η δουλειά μας σε ένα μέρος.",
         doc1: "Χρυσοί Κανόνες Механо", doc2: "Οδηγίες Ρομπότ",
@@ -961,24 +967,27 @@ function applyLang(lang) {
     // Update HTML lang attribute
     document.documentElement.lang = lang;
     
-    // Update lang selector active states
-    document.querySelectorAll('.lang-item').forEach(item => {
+    // Update ALL lang selector active states (inline and FAB)
+    document.querySelectorAll('.lang-item, .lang-fab-item').forEach(item => {
         item.classList.toggle('active', item.dataset.lang === lang);
     });
 }
 
-// Initial application
-document.addEventListener('DOMContentLoaded', () => {
+// Function to initialize all language-related listeners
+function initLanguageSystem() {
+    // Initial translation application
     applyLang(currentLang);
-});
 
-// Lang selector logic
-document.querySelectorAll('.lang-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.stopPropagation();
-        applyLang(item.dataset.lang);
+    // Lang selector logic (inline items)
+    document.querySelectorAll('.lang-item').forEach(item => {
+        // Remove old listeners if any (though in fresh page load this isn't strictly needed, 
+        // it's good practice if we were to re-init)
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            applyLang(item.dataset.lang);
+        });
     });
-});
+}
 
 // Hamburger
 const hamburger = document.getElementById('hamburger');
@@ -1038,29 +1047,8 @@ function initLangFab() {
     fabPanel.querySelectorAll('.lang-fab-item').forEach(item => {
         item.addEventListener('click', (e) => {
             e.stopPropagation();
-            const lang = item.dataset.lang;
-            applyLang(lang);
-
-            // Update active state in FAB
-            fabPanel.querySelectorAll('.lang-fab-item').forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            // Also sync the inline selectors in nav
-            document.querySelectorAll('.lang-item').forEach(i => {
-                i.classList.toggle('active', i.dataset.lang === lang);
-            });
-
+            applyLang(item.dataset.lang);
             fabPanel.classList.remove('open');
-        });
-    });
-
-    // Sync FAB active state when inline selector is used
-    document.querySelectorAll('.lang-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const lang = item.dataset.lang;
-            fabPanel.querySelectorAll('.lang-fab-item').forEach(i => {
-                i.classList.toggle('active', i.dataset.lang === lang);
-            });
         });
     });
 
@@ -1071,9 +1059,14 @@ function initLangFab() {
     });
 }
 
-// Ensure both initial load and DOM ready are handled
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLangFab);
-} else {
+// Ensure language system and FAB are initialized
+function fullLangInit() {
+    initLanguageSystem();
     initLangFab();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fullLangInit);
+} else {
+    fullLangInit();
 }
