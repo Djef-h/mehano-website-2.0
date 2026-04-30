@@ -69,7 +69,7 @@
             border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border);
-            background: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(139,92,246,0.06) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.04) 100%);
             position: relative;
         }
 
@@ -82,7 +82,7 @@
         }
 
         .model-section-header .model-badge {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: #000;
             color: white;
             font-size: 0.7rem;
             font-weight: 700;
@@ -221,41 +221,7 @@
                     <h2 data-i18n="project_doc_h2">The Innovation Path</h2>
                     <p data-i18n="project_doc_p9">Loading...</p>
 
-                    <!-- 3D MODEL VIEWER -->
-                    <div class="model-section">
-                        <div class="model-section-header">
-                            <span class="model-badge">3D Model</span>
-                            <span class="model-title">ASOA 2.0 &mdash; Interactive 3D Preview</span>
-                            <span class="model-hint">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                                Drag to rotate &middot; Scroll to zoom
-                            </span>
-                        </div>
-                        <model-viewer
-                            id="asoa-model"
-                            src="assets/project3dmodel.glb"
-                            alt="ASOA 2.0 3D model of the automated artifact desalination system"
-                            auto-rotate
-                            auto-rotate-delay="1000"
-                            rotation-per-second="20deg"
-                            camera-controls
-                            touch-action="pan-y"
-                            shadow-intensity="1.2"
-                            shadow-softness="0.8"
-                            environment-image="neutral"
-                            exposure="1.1"
-                            ar
-                            ar-modes="webxr scene-viewer quick-look"
-                            loading="eager"
-                        >
-                            <div slot="progress-bar"></div>
-                        </model-viewer>
-                        <div class="model-controls-hint">
-                            <span>&#x1F5B1; Drag &mdash; Rotate</span>
-                            <span>&#x1F50D; Scroll &mdash; Zoom</span>
-                            <span>&#x1F4F1; On mobile: AR view available</span>
-                        </div>
-                    </div>
+
 
                     <h2 data-i18n="project_doc_h3">Hardware Section</h2>
                     <p data-i18n="project_doc_p10">Loading...</p>
