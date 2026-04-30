@@ -517,11 +517,9 @@
                 desc.innerText = t.models_viewer_hint;
                 desc.setAttribute('data-i18n', 'models_viewer_hint');
             } else {
-                desc.removeAttribute('data-i18n');
-                if (currentLang === 'bg') {
-                    desc.innerText = `Специализирана конфигурация за мисия ${name.replace('_', ' ')}. Оптимизирана за скорост и точност.`;
-                } else if (currentLang === 'en') {
-                    desc.innerText = `Specialized configuration for mission ${name.replace('_', ' ')}. Optimized for speed and precision.`;
+                const descKey = 'models_run_desc';
+                if (t[descKey]) {
+                    desc.innerText = t[descKey].replace('{run}', name.replace('_', ' '));
                 } else {
                     desc.innerText = `${t.models_run} ${name.split('_')[1]}`;
                 }
@@ -567,10 +565,9 @@
                 if (name === 'Robot') {
                     desc.innerText = t.models_viewer_hint;
                 } else {
-                    if (currentLang === 'bg') {
-                        desc.innerText = `Специализирана конфигурация за мисия ${name.replace('_', ' ')}. Оптимизирана за скорост и точност.`;
-                    } else if (currentLang === 'en') {
-                        desc.innerText = `Specialized configuration for mission ${name.replace('_', ' ')}. Optimized for speed and precision.`;
+                    const descKey = 'models_run_desc';
+                    if (t[descKey]) {
+                        desc.innerText = t[descKey].replace('{run}', name.replace('_', ' '));
                     } else {
                         desc.innerText = `${t.models_run} ${name.split('_')[1]}`;
                     }
