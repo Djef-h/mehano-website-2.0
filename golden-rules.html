@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mehano — Golden Rules</title>
-    <meta name="description" content="The 30 Golden Rules of Team Mehano — our engineering philosophy, competition code, and team spirit.">
+    <title>Механо Golden Rules</title>
+    <meta name="description" content="The 30 Golden Rules of Team Механо our engineering philosophy, competition code, and team spirit.">
     <link rel="icon" type="image/jpeg" href="assets/teammehano_logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -55,14 +55,14 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, #fff 40%, #d4af37 100%);
+            background: linear-gradient(135deg, #d4af37 0%, #a68a2d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         .gr-hero p {
             font-size: 1.05rem;
-            opacity: 0.65;
+            opacity: 0.85;
             max-width: 560px;
             margin: 0 auto 40px;
             line-height: 1.7;
@@ -115,7 +115,7 @@
             font-family: 'DM Mono', monospace;
             font-size: 0.72rem;
             font-weight: 500;
-            color: #d4af37;
+            color: #b3922d;
             background: rgba(212,175,55,0.1);
             border: 1px solid rgba(212,175,55,0.25);
             border-radius: 8px;
@@ -127,7 +127,7 @@
         .gr-text {
             font-size: 0.95rem;
             line-height: 1.75;
-            opacity: 0.85;
+            opacity: 0.95;
             color: var(--text);
         }
         .gr-text strong {
@@ -151,7 +151,7 @@
             align-items: center;
             gap: 8px;
             color: var(--text);
-            opacity: 0.6;
+            opacity: 0.8;
             font-size: 0.9rem;
             font-weight: 500;
             text-decoration: none;
@@ -168,7 +168,7 @@
     <nav id="navbar">
         <div class="nav-pill">
             <div class="nav-profile">
-                <img src="assets/teammehano_logo.jpg" alt="Mehano Logo">
+                <img src="assets/teammehano_logo.jpg" alt="Механо Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> <span data-i18n="nav_home">Начало</span></a></li>
@@ -209,14 +209,8 @@
         <!-- HERO -->
         <section class="gr-hero">
             <div class="container">
-                <span class="gr-crown">👑</span>
-                <div class="gr-hero-label" data-i18n="gr_label">Златните правила</div>
-                <h1 data-i18n="gr_title">Правилата на Механо</h1>
-                <p data-i18n="gr_desc">Нашата инженерна философия, кодекс за състезания и командния дух — дистилирани в 30 правила, живяни на терена и в лабораторията.</p>
-                <div class="gr-count-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <span data-i18n="gr_count">30 Правила</span>
-                </div>
+                <h1 data-i18n="gr_title">Златните правила на Механо</h1>
+                <p data-i18n="gr_desc">Нашата инженерна философия, кодекс за състезания и командния дух дистилирани в 30 правила, живяни на терена и в лабораторията.</p>
             </div>
         </section>
 
@@ -283,8 +277,9 @@
                 const card = document.createElement('div');
                 card.className = 'gr-card reveal';
                 card.style.transitionDelay = ((i % 6) * 0.05) + 's';
+                const ruleLabel = t.gr_rule_num || 'RULE';
                 card.innerHTML = `
-                    <div class="gr-num">ПРАВИЛО ${String(i).padStart(2,'0')}</div>
+                    <div class="gr-num">${ruleLabel} ${String(i).padStart(2,'0')}</div>
                     <p class="gr-text">${text}</p>
                     <div class="gr-bg-num">${i}</div>
                 `;

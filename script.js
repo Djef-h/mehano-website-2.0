@@ -1,7 +1,7 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
-        site_logo: "Mehano",
+        site_logo: "Механо",
         nav_about: "За нас", nav_code: "Код", nav_project: "Проект",
         nav_docs: "Документи", nav_team: "Отбор", nav_location: "Място", nav_contact: "Свържи се",
         nav_models: "3D Модели",
@@ -24,7 +24,7 @@ const i18n = {
         about_project_desc: "Решаваме реални проблеми с креативни инженерни идеи, вдъхновени от темата на сезона.",
         about_video: "Видео",
         about_values_title: "Основни ценности",
-        about_values_desc: "Уважение, откритост, въздействие, приобщаване, работа в екип и забавление — нашата ДНК.",
+        about_values_desc: "Уважение, откритост, въздействие, приобщаване, работа в екип и забавление нашата ДНК.",
         code_label: "Код", code_title: "Нашият код на победата",
         code_desc: "Чист Python for SPIKE Prime. Open-source, модулен, оптимизиран.",
         project_label: "Проект", project_title: "Нашият иновативен проект",
@@ -46,8 +46,8 @@ const i18n = {
         project_doc_p5: "Всичко си дойде на мястото след онлайн среща с професионален консерватор. Тя ни разкри шокиращи детайли: артефактите от морето се разрушават за часове, ако не се обезсолят правилно. Разбрахме, че в момента консерваторите пътуват стотици километри (например от София до Созопол), само за да проверяват солеността на водата на ръка. Процесът на обезсоляване (дезалинация) е изцяло ръчен, бавен и изисква експерти да пътуват стотици километри за едно просто измерване. Разбрахме, че консерваторите нямат нужда някой да ги замества, а имат нужда от технология, която да работи за тях. Така се роди ASOA – не като нов контейнер, а като интелигентна електронна система за управление, която превръща всеки обикновен съд в автономна станция за консервация.",
         project_doc_h1: "Проблеми, които разрешава",
         project_doc_p6: "Когато един артефакт е престоял векове на дъното на морето, той е буквално „напит“ със сол до молекулярно ниво. Проблемът започва в момента, в който го извадим. Ако просто го оставим да изсъхне, солта вътре в порите му се превръща в кристали. Тези кристали се разширяват с такава сила, че буквално „взривяват“ предмета отвътре навън. За да го спасим, трябва да извлечем солта (процес, наречен дезалинация), но тук идва тънкият момент.",
-        project_doc_p7: "Традиционно това се прави „на око“ или с ръчни замервания веднъж на две седмици. Ако консерваторът изпусне момента, в който водата се е наситила със сол, процесът спира, солта остава заклещена вътре и предметът започва да се разпада за часове. С ASOA решаваме точно това — системата следи процеса всяка секунда и ни казва точно кога е достигнато „платото“.",
-        project_doc_p8: "Освен техническия риск, има и чист логистичен абсурд. В момента един консерватор трябва да пътува стотици километри, само за да потопи един уред във ваната и да види едно число. Това е огромно разхищение на време. С нашето решение експертът вижда всичко в реално време на телефона си. А вместо да сменяме водата по график — примерно на 14 дни — ние я сменяме само когато е нужно. Ако артефактът е „пуснал“ солта си на третия ден, системата го засича, сменя водата автоматично и спестява 11 дни чакане. Така съкращаваме консервацията с месеци.",
+        project_doc_p7: "Традиционно това се прави „на око“ или с ръчни замервания веднъж на две седмици. Ако консерваторът изпусне момента, в който водата се е наситила със сол, процесът спира, солта остава заклещена вътре и предметът започва да се разпада за часове. С ASOA решаваме точно това системата следи процеса всяка секунда и ни казва точно кога е достигнато „платото“.",
+        project_doc_p8: "Освен техническия риск, има и чист логистичен абсурд. В момента един консерватор трябва да пътува стотици километри, само за да потопи един уред във ваната и да види едно число. Това е огромно разхищение на време. С нашето решение експертът вижда всичко в реално време на телефона си. А вместо да сменяме водата по график примерно на 14 дни ние я сменяме само когато е нужно. Ако артефактът е „пуснал“ солта си на третия ден, системата го засича, сменя водата автоматично и спестява 11 дни чакане. Така съкращаваме консервацията с месеци.",
         project_doc_h2: "Пътят на иновацията: Как сглобихме ASOA",
         project_doc_p9: "След като изяснихме концепцията, се заловихме за работа. Първата стъпка беше закупуването на сензора за електропроводимост (EC). Тук се сблъскахме с първия сериозен инженерен проблем – калибрацията. В кода бяхме заложили стандартните 25°C като референтна стойност, но реалната температура на разтвора беше различна и това постоянно „местеше“ резултатите ни. Разбрахме, че без да знаем точната температура във всяка секунда, измерванията ни са невалидни. Затова интегрирахме и температурния сензор, който да подава данни за автоматична корекция. Самият EC сензор, който избрахме, работи на 5V и е цифров, но най-важното е, че е с К = 10 което означава че специализиран за много солена вода и използва променлив ток (AC) за измерването. Това е критично, защото при постоянен ток йоните в солената вода се „залепват“ по сондите (поляризация), което бързо води до грешни данни и корозия. Променливият ток ни позволява да мерим чисто, точно и дългосрочно. След като подготвихме електронните компоненти, преминахме към изграждането на физическия макет. За осигуряване на научна точност, системата преобразува първичните данни от сензора (микросименс на сантиметър - µS/cm) в приложни величини. Докато мерната единица TDS (mg/L или ppm) е подходяща за фини примеси в питейна вода, за нуждите на морската археология използваме PPT (Parts Per Thousand). Тъй като морската соленост е висока (около 35 PPT), тази единица ни позволява да проследим прецизно „голямата картина“ на обезсоляването в грамове сол на литър вода (g/L). Чрез вграден софтуерен алгоритъм, електрониката автоматично превръща електропроводимостта в PPT стойности, като същевременно прилага температурна компенсация. Избрахме готов аквариум с размери 30х30х30 см, за да гарантираме пълна херметичност. За стабилност проектирахме специална ъглова поставка, която държи целия електронен блок над водата. За да тестваме системата, трябваше да пресъздадем солеността на Черно море. Смесихме 100 грама нейодирана хималайска сол в 5 литра вода. За да сме сигурни в точността на нашия EC сензор, направихме контролно замерване с рефрактометър, който потвърди концентрация от 20 промила (PPT). Още при проектирането на системата за ниво на водата, ние предвидяхме специфичен физичен проблем. Използвахме Lidar сензор, работещ с инфрачервена светлина, но знаехме, че този лъч се пречупва или абсорбира от водната повърхност и не се отразява правилно обратно. За да заобиколим това ограничение, приложихме инженерно решение: поставихме във водата лека топка (поплавък). Лидарът мери дистанцията до горната повърхност на топката, която следва прецизно нивото на течността, осигурявайки ни стабилни данни без грешки от пречупване. Друга важна иновация, която внедрихме, са въртящите се спирали. При добавяне на прясна вода от чешмата към гъстия солен разтвор, смесването не става мигновено поради разликата в плътността. Спиралите осигуряват хоμοгенност на разтвора, което е критично за точността на сензорите и за равномерното обезсоляване на самия артефакт. По време на първите ни реални изпитания се сблъскахме и с други предизвикателства. Направихме тестов артефакт от дърво, изхвърлено от морето, но той не потъваше. Оставихме го да се кисне цяла нощ в соления разтвор, за да се напоят порите му, но плаваемостта му остана висока – ценен урок за това колко специфични са материалите в морската археология. Важен етап от нашето развитие беше приятелското регионално състезание. Там бяхме подготвили макета с по-малко количество вода, за да е по-лесен за пренасяне. В тези условия успяхме да демонстрираме работата на системата при по-ниска концентрация – 5 промила. Това беше отлично доказателство, че електрониката ни е достатъчно чувствителна да засича и следи процеса дори в неговия финален етап, когато по-голямата част от солта вече е извлечена от артефакта.",
         project_doc_h3: "Хардуерна част",
@@ -56,7 +56,7 @@ const i18n = {
         project_doc_p11: "Софтуерното решение на ASOA 2.0 е проектирано като комплексна IoT платформа, която превръща суровите данни от сензорите в полезна и предсказателна информация за консерваторите. Системата се състои от уеб-базирано контролно табло (Dashboard), което осигурява пълен контрол върху процеса на обезсоляване в реално време.",
         project_doc_p12: "В основата на комуникацията стои протоколът MQTT, който позволява мигновена двупосочна връзка между хардуера (ESP8266) и софтуерния интерфейс. Чрез него системата не само получава данни за солеността и температурата, но и позволява на експертите да изпращат команди обратно към устройството – например за ръчно активиране на водните помпи или въртящите се спирали. Една от най-критичните функции на софтуера е алгоритъмът за засичане на „плато“ (Plateau Detection). Системата анализира динамиката на извличане на солта и автоматично идентифицира момента, в който концентрацията в разтвора спира да се покачва. Това е ключов индикатор, че водата е наситена и процесът на дезалинация е спрял. В този момент софтуерът може автономно да вземе решение за смяна на водата, оптимизирайки времето за консервация. За нуждите на научната отчетност, системата е интегрирана с облачна база данни (Supabase). Всеки артефакт се регистрира в цифров архив, където се съхранява пълната му история – от началната соленост при изваждането от морето до финалните стойности на пречистване. Софтуерът предлага и предиктивен анализ, който на базата на събраните данни прогнозира колко време ще отнеме пълното обезсоляване на конкретния предмет. Потребителският интерфейс е изграден с фокус върху функционалността и визуализацията. Чрез интерактивни графики (Chart.js) консерваторите могат да проследят целия процес на дезалинация визуално, което помага за бързото откриване на аномалии.",
         docs_label: "Документи", docs_title: "Архив на отбора",
-        docs_desc: "Цялата ни работа на едно място — открита и достъпна.",
+        docs_desc: "Цялата ни работа на едно място открита и достъпна.",
         doc1: "Златните правила на Механо", doc2: "Инструкции на робота",
         doc3: "Инженерна тетрадка", doc4: "3D модели",
         doc_open: "Отвори", docs_cta: "📁 Отвори Google Drive →",
@@ -69,7 +69,7 @@ const i18n = {
         location_label: "Място", location_title: "Където се случва магията",
         location_desc: "Тук се събираме, проектираме и програмираме нашия робот.",
         location_school: "Професионална гимназия по механоелектроника и електроника",
-        location_school_desc: "Нашата база — училищната STEM лаборатория, където се ражда всеки прототип и идея.",
+        location_school_desc: "Нашата база училищната STEM лаборатория, където се ражда всеки прототип и идея.",
         location_map_btn: "📍 Виж на картата",
         contact_label: "Контакт", contact_title: "Свържи се с нас",
         contact_desc: "Имаш въпрос, идея или искаш да си партньор? Пиши ни.",
@@ -79,9 +79,10 @@ const i18n = {
         value_teamwork: "Работа в екип", value_inclusion: "Приобщаване", value_impact: "Въздействие",
         footer_text: "© 2025 Механо. Всички права запазени.",
         gr_label: "Златните правила",
-        gr_title: "Правилата на Механо",
-        gr_desc: "Нашата инженерна философия, кодекс за състезания и командния дух — дистилирани в 30 правила, живяни на терена и в лабораторията.",
+        gr_title: "Златните правила на Механо",
+        gr_desc: "Нашата инженерна философия, кодекс за състезания и командния дух дистилирани в 30 правила, живяни на терена и в лабораторията.",
         gr_count: "30 Правила",
+        gr_rule_num: "ПРАВИЛО",
         back_to_docs: "← Назад към документите",
         gr_rule_1: "Роботът винаги има строго фиксирана изходна позиция. Той трябва да сключва точен ъгъл с конкретно квадратче от базата, за да се гарантира правилната траектория.",
         gr_rule_2: "Никога не стартираме робота под наклон. Стабилната повърхност в момента на старта е критична за работата на сензорите.",
@@ -118,7 +119,7 @@ const i18n = {
         name_ivan: "Иван Пашов", name_dilyan: "Дилян Йорданов", name_kristian: "Кристиян Петков",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Изпълни в GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ МЕХАНО v2.0 — Секретен алгоритъм (не показвай на съдиите)</span>
+        code_snippet: `<span class="cm"># ⚙️ МЕХАНО v2.0 Секретен алгоритъм (не показвай на съдиите)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">надежда</span><span class="op">,</span> <span class="var">воля</span><span class="op">,</span> <span class="var">храна</span>
@@ -139,7 +140,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">опити</span>):
         <span class="kw">try</span>:
             <span class="var">робот</span>.<span class="fn">направи_нещо_умно</span>(<span class="var">мисия</span>)
-            <span class="fn">print</span>(<span class="str">f"Мисия {мисия} — успех! 🎉"</span>)
+            <span class="fn">print</span>(<span class="str">f"Мисия {мисия} успех! 🎉"</span>)
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoPадна</span>:
             <span class="fn">print</span>(<span class="str">"Не видяха... надявам се 🙈"</span>)
@@ -181,7 +182,7 @@ const i18n = {
         about_project_desc: "We solve real problems with creative engineering ideas inspired by the season's theme.",
         about_video: "Video",
         about_values_title: "Core Values",
-        about_values_desc: "Respect, openness, impact, inclusion, teamwork and fun — our DNA.",
+        about_values_desc: "Respect, openness, impact, inclusion, teamwork and fun our DNA.",
         code_label: "Code", code_title: "Our Winning Code",
         code_desc: "Clean Python for SPIKE Prime. Open-source, modular, optimized.",
         project_label: "Project", project_title: "Our Innovation Project",
@@ -194,6 +195,7 @@ const i18n = {
         project_impact_label: "Impact",
         project_impact: "ASOA 2.0 reduces conservation time by months, minimizes errors and logistics costs, ensuring the preservation of underwater cultural heritage.",
         project_docs: "📄 Documentation", project_site: "🌐 Visit Site",
+        gr_rule_num: "RULE",
         project_details_title: "Research Project Documentation",
         back_to_project: "← Back to Project",
         project_doc_p1: "Our research began with great excitement and a visit to the archaeological museum. Initially inspired by the technology, we briefly considered creating a digging robot, but soon realized that the real challenges in archaeology are quite different. We will remember this first day for the extreme weather – that's when the big floods in Tsarevo happened. Roads were blocked, it was raining, but we were there, determined to find a significant cause.",
@@ -213,20 +215,20 @@ const i18n = {
         project_doc_p11: "The ASOA 2.0 software solution is designed as a complex IoT (Internet of Things) platform that converts raw sensor data into useful and predictive information for conservators. The system consists of a web-based Dashboard that provides full control over the desalination process in real time.",
         project_doc_p12: "At the core of communication is the MQTT protocol, which allows instant two-way connection between the hardware (ESP8266) and the software interface. Through it, the system not only receives data on salinity and temperature but also allows experts to send commands back to the device – for example, to manually activate water pumps or rotating spirals. One of the most critical functions of the software is the Plateau Detection algorithm. The system analyzes the salt extraction dynamics and automatically identifies the moment when the concentration in the solution stops rising. This is a key indicator that the water is saturated and the desalination process has stopped. At this moment, the software can autonomously decide to change the water, optimizing conservation time. For scientific reporting needs, the system is integrated with a cloud database (Supabase). Each artifact is registered in a digital archive where its full history is stored – from initial salinity when removed from the sea to final purification values. The software also offers predictive analysis which, based on the collected data, forecasts how long full desalination of a specific object will take. The user interface is built with a focus on functionality and visualization. Through interactive graphs (Chart.js), conservators can track the entire desalination process visually, which helps in quickly detecting anomalies.",
         docs_label: "Documents", docs_title: "Team Archive",
-        docs_desc: "All our work in one place — open and accessible.",
-        doc1: "Механо Golden Rules", doc2: "Robot Instructions",
+        docs_desc: "All our work in one place open and accessible.",
+        doc1: "Mehano Golden Rules", doc2: "Robot Instructions",
         doc3: "Engineering Notebook", doc4: "3D Models",
         doc_open: "Open", docs_cta: "📁 Open Google Drive →",
-        team_label: "Team", team_title: "The People Behind Механо",
+        team_label: "Team", team_title: "The People Behind Mehano",
         team_desc: "Nine unique minds. One shared mission.",
         mentor: "Mentor", role_mentor: "Mentor", role_programmer: "Programmer",
         role_tech: "Technician", role_builder: "Builder", role_3d: "3D Modeling", role_research: "Research",
         partner_label: "Partner", partner_title: "Building the Future Together",
-        partner_desc: "Team Power Vortex is from Shumen — a city with a rich history. We thank our official partner for their support, resources and trust. Your contribution turns our dreams into reality.",
+        partner_desc: "Team Power Vortex is from Shumen a city with a rich history. We thank our official partner for their support, resources and trust. Your contribution turns our dreams into reality.",
         location_label: "Location", location_title: "Where the Magic Happens",
         location_desc: "Here we meet, design and program our robot.",
         location_school: "Professional High School of Mechatronics and Electronics",
-        location_school_desc: "Our base — the school STEM lab where every prototype, line of code and new idea is born.",
+        location_school_desc: "Our base the school STEM lab where every prototype, line of code and new idea is born.",
         location_map_btn: "📍 View on Map",
         contact_label: "Contact", contact_title: "Get in Touch",
         contact_desc: "Have a question, idea or want to be a partner? Write to us.",
@@ -236,8 +238,8 @@ const i18n = {
         value_teamwork: "Teamwork", value_inclusion: "Inclusion", value_impact: "Impact",
         footer_text: "© 2025 Mehano. All rights reserved.",
         gr_label: "Golden Rules",
-        gr_title: "The Mehano Rules",
-        gr_desc: "Our engineering philosophy, competition code, and team spirit — distilled into 30 rules, lived on the field and in the lab.",
+        gr_title: "Mehano Golden Rules",
+        gr_desc: "Our engineering philosophy, competition code, and team spirit distilled into 30 rules, lived on the field and in the lab.",
         gr_count: "30 Rules",
         back_to_docs: "← Back to Documents",
         gr_rule_1: "The robot always has a strictly fixed starting position. It must form an exact angle with a specific square of the base to ensure the correct trajectory.",
@@ -275,7 +277,7 @@ const i18n = {
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Run on GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Secret Algorithm (don't show the judges)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Secret Algorithm (don't show the judges)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -296,7 +298,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(<span class="str">f"Mission {mission} — success! 🎉"</span>)
+            <span class="fn">print</span>(<span class="str">f"Mission {mission} success! 🎉"</span>)
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>(<span class="str">"They didn't see... hopefully 🙈"</span>)
@@ -314,6 +316,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     el: {
+        gr_rule_num: "ΚΑΝΟΝΑΣ",
         site_logo: "Mehano",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
@@ -383,7 +386,7 @@ const i18n = {
         project_doc_p12: "Στον πυρήνα της επικοινωνίας βρίσκεται το πρωτόκολλο MQTT, το οποίο επιτρέπει άμεση αμφίδρομη σύνδεση μεταξύ του υλικού (ESP8266) και της διεπαφής λογισμικού. Μέσω αυτού, το σύστημα όχι μόνο λαμβάνει δεδομένα για την αλατότητα και τη θερμοκρασία, αλλά επιτρέπει επίσης στους ειδικούς να στέλνουν εντολές πίσω στη συσκευή – για παράδειγμα, να ενεργοποιούν χειροκίνητα τις αντλίες νερού ή τις περιστρεφόμενες σπείρες. Μία από τις πιο κρίσιμες λειτουργίες του λογισμικού είναι ο αλγόριθμος Ανίχνευσης Πλατό (Plateau Detection). Το σύστημα αναλύει τη δυναμική εξαγωγής αλατιού και προσδιορίζει αυτόματα τη στιγμή που η συγκέντρωση στο διάλυμα σταματά να αυξάνεται. Αυτός είναι ένας βασικός δείκτης ότι το νερό είναι κορεσμένο και η διαδικασία αφαλάτωσης έχει σταματήσει. Σε αυτή τη στιγμή, το λογισμικό μπορεί αυτόνομα να αποφασίσει να αλλάξει το νερό, βελτιστοποιώντας το χρόνο συντήρησης. Για τις ανάγκες της επιστημονικής αναφοράς, το σύστημα είναι ενσωματωμένο με μια βάση δεδομένων cloud (Supabase). Κάθε αντικείμενο καταχωρείται σε ένα ψηφιακό αρχείο όπου αποθηκεύεται το πλήρες ιστορικό του – από την αρχική αλατότητα κατά την αφαίρεση από τη θάλασσα έως τις τελικές τιμές καθαρισμού. Το λογισμικό προσφέρει επίσης προγνωστική ανάλυση η οποία, βάσει των συλλεχθέντων δεδομένων, προβλέπει πόσο χρόνο θα πάρει η πλήρης αφαλάτωση ενός συγκεκριμένου αντικειμένου. Η διεπαφή χρήστη είναι χτισμένη με έμφαση στη λειτουργικότητα και την οπτικοποίηση. Μέσω διαδραστικών γραφημάτων (Chart.js), οι συντηρητές μπορούν να παρακολουθούν οπτικά ολόκληρη τη διαδικασία αφαλάτωσης, γεγονός που βοηθά στον γρήγορο εντοπισμό ανωμαλιών.",
         docs_label: "Έγγραφα", docs_title: "Αρχείο Ομάδας",
         docs_desc: "Όλη η δουλειά μας σε ένα μέρος.",
-        doc1: "Χρυσοί Κανόνες Механо", doc2: "Οδηγίες Ρομπότ",
+        doc1: "Χρυσοί Κανόνες Mehano", doc2: "Οδηγίες Ρομπότ",
         doc3: "Μηχανικό Σημειωματάριο", doc4: "3D Μοντέλα",
         doc_open: "Άνοιγμα", docs_cta: "📁 Άνοιγμα Google Drive →",
         team_label: "Ομάδα", team_title: "Οι Άνθρωποι πίσω από τη Мехаνο",
@@ -395,7 +398,7 @@ const i18n = {
         location_label: "Τοποθεσία", location_title: "Όπου Γίνεται η Μαγεία",
         location_desc: "Εδώ συναντιόμαστε, σχεδιάζουμε και προγραμματίζουμε το ρομπότ μας.",
         location_school: "Επαγγελματικό Λύκειο Μηχανοηλεκτρονικής",
-        location_school_desc: "Η βάση μας — το σχολικό εργαστήριο STEM.",
+        location_school_desc: "Η βάση μας το σχολικό εργαστήριο STEM.",
         location_map_btn: "📍 Εμφάνιση στον Χάρτη",
         contact_label: "Επικοινωνία", contact_title: "Επικοινωνήστε μαζί μας",
         contact_desc: "Έχετε ερώτηση ή ιδέα; Γράψτε μας.",
@@ -405,8 +408,8 @@ const i18n = {
         value_teamwork: "Ομαδική εργασία", value_inclusion: "Ένταξη", value_impact: "Αντίκτυπος",
         footer_text: "© 2025 Mehano. Με την επιφύλαξη παντός δικαιώματος.",
         gr_label: "Χρυσοί Κανόνες",
-        gr_title: "Οι Κανόνες της Mehano",
-        gr_desc: "Η μηχανική μας φιλοσοφία, ο κώδικας ανταγωνισμού και το ομαδικό πνεύμα — αποσταγμένα σε 30 κανόνες.",
+        gr_title: "Χρυσοί Κανόνες της Mehano",
+        gr_desc: "Η μηχανική μας φιλοσοφία, ο κώδικας ανταγωνισμού και το ομαδικό πνεύμα αποσταγμένα σε 30 κανόνες.",
         gr_count: "30 Κανόνες",
         back_to_docs: "← Πίσω στα Έγγραφα",
         gr_rule_1: "Το ρομπότ έχει πάντα μια αυστηρά καθορισμένη θέση εκκίνησης. Πρέπει να σχηματίζει μια ακριβή γωνία με ένα συγκεκριμένο τετράγωνο στη βάση για να διασφαλιστεί η σωστή τροχιά.",
@@ -444,7 +447,7 @@ const i18n = {
         name_ivan: "Ιβάν Πασόφ", name_dilyan: "Ντιλιάν Γιορντάνοφ", name_kristian: "Κριστιγιάν Πετκόφ",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Εκτέλεση στο GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Μυστικός αλγόριθμος (μην τον δείξετε στους κριτές)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Μυστικός αλγόριθμος (μην τον δείξετε στους κριτές)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -465,7 +468,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"Αποστολή {mission} — επιτυχία! 🎉")
+            <span class="fn">print</span>(f"Αποστολή {mission} επιτυχία! 🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>("Δεν είδαν τίποτα... ελπίζω 🙈")
@@ -520,6 +523,7 @@ const i18n = {
         project_impact_label: "影响",
         project_impact: "将保护时间缩短数月，确保水下文化遗产的保存。",
         project_docs: "📄 文档", project_site: "🌐 访问网站",
+        gr_rule_num: "规则",
         project_details_title: "研究项目文档",
         back_to_project: "← 返回项目",
         project_doc_p1: "我们的研究始于巨大的兴奋和对考古博物馆的访问。最初受到技术的启发，我们曾短暂考虑过创建一个挖掘机器人，但很快意识到考古学面临的真正挑战完全不同。我们会记住这第一天，因为极端的天气——就在那时，察雷沃发生了大洪水。道路被封锁，下着雨，但我们在那里，决心找到一个重要的原因。",
@@ -540,10 +544,10 @@ const i18n = {
         project_doc_p12: "通信的核心是MQTT协议，它允许硬件（ESP8266）和软件界面之间进行即时双向连接。通过它，系统不仅接收盐度和温度数据，还允许专家向设备发送指令——例如，手动激活水泵或旋转螺旋。软件最关键的功能之一是平台期检测（Plateau Detection）算法。系统分析盐提取动态，并自动识别溶液浓度停止上升的时刻。这是一个关键指标，表明水已饱和且脱盐过程已停止。此时，软件可以自主决定换水，优化保护时间。为了科学报告的需要，系统集成了云数据库（Supabase）。每件文物都在数字档案中注册，存储其完整历史——从从海中取出时的初始盐度到最终的净化值。软件还提供预测分析，根据收集的数据预测特定物体完成完全脱盐所需的时间。用户界面构建时注重功能性和可视化。通过交互式图表（Chart.js），保护员可以直观地跟踪整个脱盐过程，这有助于快速检测异常情况。",
         docs_label: "文件", docs_title: "团队档案",
         docs_desc: "我们所有的工作都在一个地方——开放且可访问。",
-        doc1: "Механо黄金规则", doc2: "机器人说明",
+        doc1: "Mehano黄金规则", doc2: "机器人说明",
         doc3: "工程笔记本", doc4: "3D模型",
         doc_open: "打开", docs_cta: "📁 打开Google Drive →",
-        team_label: "团队", team_title: "Механо背后的人",
+        team_label: "团队", team_title: "Mehano背后的人",
         team_desc: "九个独特的头脑。一个共同的使命。",
         mentor: "导师", role_mentor: "导师", role_programmer: "程序员",
         role_tech: "技术员", role_builder: "建造者", role_3d: "3D建模", role_research: "研究",
@@ -562,7 +566,7 @@ const i18n = {
         value_teamwork: "团队合作", value_inclusion: "包容性", value_impact: "影响",
         footer_text: "© 2025 Mehano。保留所有权利。",
         gr_label: "黄金规则",
-        gr_title: "Mehano 规则",
+        gr_title: "Mehano 黄金规则",
         gr_desc: "我们的工程哲学、比赛准则和团队精神——浓缩为 30 条规则，在赛场和实验室中践行。",
         gr_count: "30 条规则",
         back_to_docs: "← 返回文档",
@@ -601,7 +605,7 @@ const i18n = {
         name_ivan: "伊万·帕肖夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂扬·佩特科夫",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ 在 GitHub 上运行 →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — 秘密算法（不要给评委看）</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 秘密算法（不要给评委看）</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -622,7 +626,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"任务 {mission} — 成功！🎉")
+            <span class="fn">print</span>(f"任务 {mission} 成功！🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>("他们没看到... 希望如此 🙈")
@@ -640,6 +644,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">win_tournament</span>())`,
     },
     pt: {
+        gr_rule_num: "REGRA",
         site_logo: "Mehano",
         nav_home: "Início",
         nav_about: "Sobre", nav_code: "Código", nav_project: "Projeto",
@@ -664,7 +669,7 @@ const i18n = {
         about_project_desc: "Resolvemos problemas reais com ideias criativas inspiradas no tema da temporada.",
         about_video: "Vídeo",
         about_values_title: "Valores Fundamentais",
-        about_values_desc: "Respeito, abertura, impacto, inclusão, trabalho em equipa e diversão — o nosso ADN.",
+        about_values_desc: "Respeito, abertura, impacto, inclusão, trabalho em equipa e diversão o nosso ADN.",
         code_label: "Código", code_title: "O Nosso Código Vencedor",
         code_desc: "Python limpo para SPIKE Prime. Open-source, modular, otimizado.",
         project_label: "Projeto", project_title: "O Nosso Projeto Inovador",
@@ -696,11 +701,11 @@ const i18n = {
         project_doc_p11: "A solução de software ASOA 2.0 foi concebida como uma plataforma IoT (Internet of Things) complexa que converte dados brutos de sensores em informações úteis e preditivas para os conservadores. O sistema consiste num Painel de Controlo (Dashboard) baseado na web que fornece controlo total sobre o processo de dessalinização em tempo real.",
         project_doc_p12: "No centro da comunicação está o protocolo MQTT, que permite uma ligação bidirecional instantânea entre o hardware (ESP8266) e o interface de software. Através dele, o sistema não só recebe dados sobre salinidade e temperatura, mas também permite que os especialistas enviem comandos de volta para o dispositivo – por exemplo, para ativar manualmente bombas de água ou espirais rotativas. Uma das funções mais críticas do software é o algoritmo de Deteção de Plateau (Plateau Detection). O sistema analisa a dinâmica de extração de sal e identifica automaticamente o momento em que a concentração na solução pára de subir. Este é um indicador chave de que a água está saturada e o processo de dessalinização parou. Neste momento, o software pode decidir autonomamente mudar a água, otimizando o tempo de conservação. Para necessidades de relatórios científicos, o sistema está integrado com uma base de dados na nuvem (Supabase). Cada artefacto é registado num arquivo digital onde é guardado o seu histórico completo – desde a salinidade inicial quando retirado do mar até aos valores finais de purificação. O software também oferece análise preditiva que, com base nos dados recolhidos, prevê quanto tempo levará a dessalinização completa de um objeto específico. O interface de utilizador foi construído com foco na funcionalidade e visualização. Através de gráficos interativos (Chart.js), os conservadores podem acompanhar visualmente todo o processo de dessalinização, o que ajuda a detetar rapidamente anomalias.",
         docs_label: "Documentos", docs_title: "Arquivo da Equipa",
-        docs_desc: "Todo o nosso trabalho num só lugar — aberto e acessível.",
-        doc1: "Regras de Ouro da Механо", doc2: "Instruções do Robô",
+        docs_desc: "Todo o nosso trabalho num só lugar aberto e acessível.",
+        doc1: "Regras de Ouro da Mehano", doc2: "Instruções do Robô",
         doc3: "Caderno de Engenharia", doc4: "Modelos 3D",
         doc_open: "Abrir", docs_cta: "📁 Abrir Google Drive →",
-        team_label: "Equipa", team_title: "As Pessoas por Trás da Механо",
+        team_label: "Equipa", team_title: "As Pessoas por Trás da Mehano",
         team_desc: "Nove mentes únicas. Uma missão comum.",
         mentor: "Mentor", role_mentor: "Mentor", role_programmer: "Programador",
         role_tech: "Técnico", role_builder: "Construtor", role_3d: "Modelação 3D", role_research: "Pesquisa",
@@ -709,7 +714,7 @@ const i18n = {
         location_label: "Local", location_title: "Onde Acontece a Magia",
         location_desc: "Aqui nos reunimos, projetamos e programamos o nosso robô.",
         location_school: "Escola Secundária de Mecatrónica e Eletrónica",
-        location_school_desc: "A nossa base — o laboratório STEM da escola, onde nasce cada protótipo e ideia.",
+        location_school_desc: "A nossa base o laboratório STEM da escola, onde nasce cada protótipo e ideia.",
         location_map_btn: "📍 Ver no Mapa",
         contact_label: "Contato", contact_title: "Entre em Contacto",
         contact_desc: "Tem uma pergunta, idea ou quer ser parceiro? Escreva-nos.",
@@ -719,8 +724,8 @@ const i18n = {
         value_teamwork: "Trabalho em equipe", value_inclusion: "Inclusão", value_impact: "Impacto",
         footer_text: "© 2025 Mehano. Todos os direitos reservados.",
         gr_label: "Regras de Ouro",
-        gr_title: "Regras da Mehano",
-        gr_desc: "Nossa filosofia de engenharia, código de competição e espírito de equipe — destilados em 30 regras.",
+        gr_title: "Regras de Ouro da Mehano",
+        gr_desc: "Nossa filosofia de engenharia, código de competição e espírito de equipe destilados em 30 regras.",
         gr_count: "30 Regras",
         back_to_docs: "← Voltar aos Documentos",
         gr_rule_1: "O robô sempre tem uma posição inicial estritamente fixa.",
@@ -729,7 +734,7 @@ const i18n = {
         gr_rule_4: "O design do robô deve ser denso e otimizado.",
         gr_rule_5: "Hardware e software devem sempre trabalhar em sincronia total.",
         gr_rule_6: "Abordagem experimental: Cada ideia deve ser testada na prática.",
-        gr_rule_7: "Se algo der errado — a culpa é sempre do 'robô'. Nós nos apoiamos!",
+        gr_rule_7: "Se algo der errado a culpa é sempre do 'robô'. Nós nos apoiamos!",
         gr_rule_8: "“Olho do Observador”: Uma terceira pessoa sempre verifica a montagem ou o código.",
         gr_rule_9: "Antes de cada corrida, os pneus são limpos.",
         gr_rule_10: "Verifique se os pinos estão totalmente inseridos após cada retorno.",
@@ -746,19 +751,19 @@ const i18n = {
         gr_rule_21: "O riso é a distância mais curta entre duas ideias.",
         gr_rule_22: "A lei do décimo de milímetro: usamos cada milímetro.",
         gr_rule_23: "A Lei do 'Acabou de Começar': A máquina funciona perfeitamente quando ninguém olha.",
-        gr_rule_24: "Se funciona — não toque!",
+        gr_rule_24: "Se funciona não toque!",
         gr_rule_25: "Espalhados como LEGO, montados como um bisturi.",
         gr_rule_26: "Sempre carregue motor, cabo e bateria reserva.",
         gr_rule_27: "Ao vestir a camiseta da equipe, você se torna parte de uma lenda.",
         gr_rule_28: "Encontre o que NÃO é proibido. Chamamos de 'otimização de regulamento'.",
         gr_rule_29: "Seja tão preciso que alcance resultados maiores seguindo as regras.",
-        gr_rule_30: "Depois da competição — comemos de novo. A amizade permanece.",
+        gr_rule_30: "Depois da competição comemos de novo. A amizade permanece.",
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Executar no GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algoritmo secreto (não mostre aos juízes)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Algoritmo secreto (não mostre aos juízes)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -779,7 +784,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"Missão {mission} — sucesso! 🎉")
+            <span class="fn">print</span>(f"Missão {mission} sucesso! 🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>("Eles não viram... espero 🙈")
@@ -798,6 +803,7 @@ const i18n = {
 
     },
     es: {
+        gr_rule_num: "REGLA",
         site_logo: "Mehano",
         nav_home: "Inicio",
         nav_about: "Nosotros", nav_code: "Código", nav_project: "Proyecto",
@@ -822,7 +828,7 @@ const i18n = {
         about_project_desc: "Resolvemos problemas reales con ideas creativas inspiradas en el tema de la temporada.",
         about_video: "Video",
         about_values_title: "Valores Fundamentales",
-        about_values_desc: "Respecto, apertura, impacto, inclusión, trabajo en equipo y diversión — nuestro ADN.",
+        about_values_desc: "Respecto, apertura, impacto, inclusión, trabajo en equipo y diversión nuestro ADN.",
         code_label: "Código", code_title: "Nuestro Código Ganador",
         code_desc: "Python limpio para SPIKE Prime. Open-source, modular, optimizado.",
         project_label: "Proyecto", project_title: "Nuestro Proyecto Innovador",
@@ -854,11 +860,11 @@ const i18n = {
         project_doc_p11: "La solución de software ASOA 2.0 está diseñada como una compleja plataforma IoT (Internet de las cosas) que convierte los datos brutos de los sensores en información útil y predictiva para los conservadores. El sistema consta de un panel de control basado en la web (Dashboard) que proporciona un control total sobre el proceso de desalinización en tiempo real.",
         project_doc_p12: "En el núcleo de la comunicación se encuentra el protocolo MQTT, que permite una conexión bidireccional instantánea entre el hardware (ESP8266) y la interfaz de software. A través de él, el sistema no solo recibe datos sobre salinidad y temperatura, sino que también permite a los expertos enviar comandos al dispositivo, por ejemplo, para activar manualmente las bombas de agua o las espirales giratorias. Una de las funciones más críticas del software es el algoritmo de detección de meseta (Plateau Detection). El sistema analiza la dinámica de extracción de sal e identifica automáticamente el momento en que la concentración de la solución deja de aumentar. Este es un indicador clave de que el agua está saturada y el proceso de desalinización se ha detenido. En este momento, el software puede decidir de forma autónoma cambiar el agua, optimizando el tiempo de conservación. Para las necesidades de los informes científicos, el sistema está integrado con una base de datos en la nube (Supabase). Cada artefacto se registra en un archivo digital donde se almacena su historial completo, desde la salinidade inicial al extraerlo del mar hasta los valores finales de purificación. El software también ofrece un análisis predictivo que, basándose en los datos recogidos, pronostica cuánto tiempo tardará la desalinización completa de un objeto específico. La interfaz de usuario se ha creado centrándose en la funcionalidad y la visualización. Mediante gráficos interactivos (Chart.js), los conservadores pueden seguir visualmente todo el proceso de desalinización, lo que ayuda a detectar rápidamente anomalías.",
         docs_label: "Documentos", docs_title: "Archivo del Equipo",
-        docs_desc: "Todo nuestro trabajo en un solo lugar — abierto y accesible.",
-        doc1: "Reglas de Oro de Механо", doc2: "Instrucciones del Robot",
+        docs_desc: "Todo nuestro trabajo en un solo lugar abierto y accesible.",
+        doc1: "Reglas de Oro de Mehano", doc2: "Instrucciones del Robot",
         doc3: "Cuaderno de Ingeniería", doc4: "Modelos 3D",
         doc_open: "Abrir", docs_cta: "📁 Abrir Google Drive →",
-        team_label: "Equipo", team_title: "Las Personas detrás de Механо",
+        team_label: "Equipo", team_title: "Las Personas detrás de Mehano",
         team_desc: "Nueve mentes únicas. Una misión común.",
         mentor: "Mentor", role_mentor: "Mentor", role_programmer: "Programador",
         role_tech: "Técnico", role_builder: "Constructor", role_3d: "Modelado 3D", role_research: "Investigación",
@@ -867,7 +873,7 @@ const i18n = {
         location_label: "Lugar", location_title: "Donde Ocurre la Magia",
         location_desc: "Aquí nos reunimos, diseñamos y programamos nuestro robot.",
         location_school: "Instituto Profesional de Mecatrónica y Electrónica",
-        location_school_desc: "Nuestra base — el laboratorio STEM escolar donde nace cada prototipo e idea.",
+        location_school_desc: "Nuestra base el laboratorio STEM escolar donde nace cada prototipo e idea.",
         location_map_btn: "📍 Ver en el Mapa",
         contact_label: "Contacto", contact_title: "Ponte en Contacto",
         contact_desc: "¿Tienes una pregunta, idea o quieres ser socio? Escríbenos.",
@@ -877,8 +883,8 @@ const i18n = {
         value_teamwork: "Trabajo en equipo", value_inclusion: "Inclusión", value_impact: "Impacto",
         footer_text: "© 2025 Mehano. Todos los derechos reservados.",
         gr_label: "Reglas de Oro",
-        gr_title: "Reglas de Mehano",
-        gr_desc: "Nuestra filosofía de ingeniería, código de competición y espíritu de equipo — destilados en 30 reglas.",
+        gr_title: "Reglas de Oro de Mehano",
+        gr_desc: "Nuestra filosofía de ingeniería, código de competición y espíritu de equipo destilados en 30 reglas.",
         gr_count: "30 Reglas",
         back_to_docs: "← Volver a Documentos",
         gr_rule_1: "El robot siempre tiene una posición inicial estrictamente fija.",
@@ -916,7 +922,7 @@ const i18n = {
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Ejecutar en GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algoritmo secreto (no mostrar a los jueces)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Algoritmo secreto (no mostrar a los jueces)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -937,7 +943,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"Misión {mission} — ¡éxito! 🎉")
+            <span class="fn">print</span>(f"Misión {mission} ¡éxito! 🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>("No vieron nada... espero 🙈")
@@ -957,6 +963,7 @@ const i18n = {
     },
 
         de: {
+        gr_rule_num: "REGEL",
         site_logo: "Mehano",
         nav_home: "Startseite",
         nav_about: "Über uns", nav_code: "Code", nav_project: "Projekt",
@@ -981,7 +988,7 @@ const i18n = {
         about_project_desc: "Wir lösen reale Probleme mit kreativen technischen Ideen, inspiriert vom Thema der Saison.",
         about_video: "Video",
         about_values_title: "Grundwerte",
-        about_values_desc: "Respekt, Offenheit, Wirkung, Inklusion, Teamarbeit und Spaß — unsere DNA.",
+        about_values_desc: "Respekt, Offenheit, Wirkung, Inklusion, Teamarbeit und Spaß unsere DNA.",
         code_label: "Code", code_title: "Unser Siegercode",
         code_desc: "Sauberer Python für SPIKE Prime. Open-Source, modular, optimiert.",
         project_label: "Projekt", project_title: "Unser Innovationsprojekt",
@@ -1013,7 +1020,7 @@ const i18n = {
         project_doc_p11: "Die ASOA 2.0 Softwarelösung ist als komplexe IoT-Plattform konzipiert, die Rohsensordaten in nützliche und vorausschauende Informationen für Konservatoren umwandelt. Das System besteht aus einem webbasierten Dashboard, das die volle Kontrolle über den Entsalzungsprozess in Echtzeit ermöglicht.",
         project_doc_p12: "Kern der Kommunikation ist das MQTT-Protokoll, das eine sofortige bidirektionale Verbindung zwischen der Hardware (ESP8266) und der Softwareoberfläche ermöglicht. Darüber empfängt das System nicht nur Daten zu Salzgehalt und Temperatur, sondern ermöglicht es Experten auch, Befehle an das Gerät zurückzusenden – zum Beispiel, um Wasserpumpen oder rotierende Spiralen manuell zu aktivieren. Eine der kritischsten Funktionen der Software ist der Plateau-Erkennungsalgorithmus (Plateau Detection). Das System analysiert die Salzextraktionsdynamik und identifiziert automatisch den Moment, in dem die Konzentration in der Lösung nicht mehr steigt. Dies ist ein wichtiger Indikator dafür, dass das Wasser gesättigt ist und der Entsalzungsprozess gestoppt wurde. In diesem Moment kann die Software eigenständig entscheiden, das Wasser zu wechseln und so die Konservierungszeit optimieren. Für wissenschaftliche Berichtszwecke ist das System in eine Cloud-Datenbank (Supabase) integriert. Jedes Artefakt wird in einem digitalen Archiv registriert, in dem seine vollständige Geschichte gespeichert ist – vom anfänglichen Salzgehalt bei der Entnahme aus dem Meer bis hin zu den endgültigen Reinigungswerten. Die Software bietet auch prädiktive Analysen, die basierend auf den gesammelten Daten vorhersagen, wie lange die vollständige Entsalzung eines bestimmten Objekts dauern wird. Die Benutzeroberfläche wurde mit Fokus auf Funktionalität und Visualisierung erstellt. Über interaktive Grafiken (Chart.js) können Konservatoren den gesamten Entsalzungsprozess visuell verfolgen, was hilft, Anomalien schnell zu erkennen.",
         docs_label: "Dokumente", docs_title: "Team-Archiv",
-        docs_desc: "Unsere gesamte Arbeit an einem Ort — offen und zugänglich.",
+        docs_desc: "Unsere gesamte Arbeit an einem Ort offen und zugänglich.",
         doc1: "Goldene Regeln von Mehano", doc2: "Roboter-Anleitungen",
         doc3: "Ingenieur-Notizbuch", doc4: "3D-Modelle",
         doc_open: "Öffnen", docs_cta: "📁 Google Drive öffnen →",
@@ -1026,7 +1033,7 @@ const i18n = {
         location_label: "Standort", location_title: "Wo die Magie passiert",
         location_desc: "Hier treffen wir uns, entwerfen und programmieren unseren Roboter.",
         location_school: "Berufliche Oberschule für Mechatronik und Elektronik",
-        location_school_desc: "Unsere Basis — das STEM-Labor der Schule, wo jeder Prototyp und jede Idee geboren wird.",
+        location_school_desc: "Unsere Basis das STEM-Labor der Schule, wo jeder Prototyp und jede Idee geboren wird.",
         location_map_btn: "📍 Auf Karte anzeigen",
         contact_label: "Kontakt", contact_title: "Kontaktieren Sie uns",
         contact_desc: "Haben Sie eine Frage, eine Idee oder möchten Sie Partner werden? Schreiben Sie uns.",
@@ -1036,8 +1043,8 @@ const i18n = {
         value_teamwork: "Teamarbeit", value_inclusion: "Inklusion", value_impact: "Wirkung",
         footer_text: "© 2025 Mehano. Alle Rechte vorbehalten.",
         gr_label: "Goldene Regeln",
-        gr_title: "Mehano-Regeln",
-        gr_desc: "Unsere Ingenieursphilosophie, unser Wettbewerbskodex und unser Teamgeist — destilliert in 30 Regeln.",
+        gr_title: "Mehano Goldene Regeln",
+        gr_desc: "Unsere Ingenieursphilosophie, unser Wettbewerbskodex und unser Teamgeist destilliert in 30 Regeln.",
         gr_count: "30 Regeln",
         back_to_docs: "← Zurück zu Dokumenten",
         gr_rule_1: "Der Roboter hat immer eine streng festgelegte Startposition.",
@@ -1046,7 +1053,7 @@ const i18n = {
         gr_rule_4: "Das Roboterdesign muss kompakt und optimiert sein.",
         gr_rule_5: "Hardware und Software müssen immer perfekt synchron arbeiten.",
         gr_rule_6: "Experimenteller Ansatz: Jede Idee muss in der Praxis getestet werden.",
-        gr_rule_7: "Wenn etwas schief geht — der „Roboter“ ist immer schuld. Wir halten zusammen!",
+        gr_rule_7: "Wenn etwas schief geht der „Roboter“ ist immer schuld. Wir halten zusammen!",
         gr_rule_8: "„Das Auge des Betrachters“: Eine dritte Person prüft immer Montage oder Code.",
         gr_rule_9: "Vor jedem Lauf werden die Reifen gereinigt.",
         gr_rule_10: "Prüfen Sie nach jeder Rückkehr, ob die Pins fest sitzen.",
@@ -1063,19 +1070,19 @@ const i18n = {
         gr_rule_21: "Lachen ist die kürzeste Verbindung zwischen zwei Ideen.",
         gr_rule_22: "Das Gesetz des Zehntelmillimeters: Wir nutzen jeden Millimeter.",
         gr_rule_23: "Das Gesetz des „Gerade Gestartet“: Die Maschine läuft perfekt, wenn keiner zuschaut.",
-        gr_rule_24: "Wenn es funktioniert — nicht anfassen!",
+        gr_rule_24: "Wenn es funktioniert nicht anfassen!",
         gr_rule_25: "Verstreut wie LEGO, zusammengebaut wie ein Skalpell.",
         gr_rule_26: "Tragen Sie immer Ersatzmotor, Kabel und Batterie bei sich.",
         gr_rule_27: "Mit dem Team-Shirt wirst du Teil einer Legende.",
         gr_rule_28: "Finden Sie heraus, was NICHT verboten ist. „Regeloptimierung“.",
         gr_rule_29: "Seien Sie so präzise, dass Sie trotz Regeln höhere Ergebnisse erzielen.",
-        gr_rule_30: "Nach dem Wettbewerb — wird wieder gegessen. Freundschaft bleibt.",
+        gr_rule_30: "Nach dem Wettbewerb wird wieder gegessen. Freundschaft bleibt.",
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristian Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Auf GitHub ausführen →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Geheimer Algorithmus (nicht den Richtern zeigen)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Geheimer Algorithmus (nicht den Richtern zeigen)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">essen</span><span class="op">,</span> <span class="var">zufall</span><span class="op">,</span> <span class="var">träume</span><span class="op">,</span> <span class="var">panik</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hoffnung</span><span class="op">,</span> <span class="var">wille</span><span class="op">,</span> <span class="var">lebensmittel</span>
@@ -1096,7 +1103,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">versuche</span>):
         <span class="kw">try</span>:
             <span class="var">roboter</span>.<span class="fn">etwas_kluges_tun</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"Mission {mission} — Erfolg! 🎉")
+            <span class="fn">print</span>(f"Mission {mission} Erfolg! 🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoGefallen</span>:
             <span class="fn">print</span>("Sie haben nichts gesehen... hoffentlich 🙈")
@@ -1114,6 +1121,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">turnier_gewinnen</span>())`,
     },
     fr: {
+        gr_rule_num: "RÈGLE",
         site_logo: "Mehano",
         nav_home: "Accueil",
         nav_about: "À propos", nav_code: "Code", nav_project: "Projet",
@@ -1138,7 +1146,7 @@ const i18n = {
         about_project_desc: "Nous résolvons des problèmes réels avec des idées d'ingénierie créatives inspirées du thème de la saison.",
         about_video: "Vidéo",
         about_values_title: "Valeurs fondamentales",
-        about_values_desc: "Respect, ouverture, impact, inclusion, travail d'équipe et plaisir — notre ADN.",
+        about_values_desc: "Respect, ouverture, impact, inclusion, travail d'équipe et plaisir notre ADN.",
         code_label: "Code", code_title: "Notre code gagnant",
         code_desc: "Python propre pour SPIKE Prime. Open-source, modulaire, optimisé.",
         project_label: "Projet", project_title: "Notre projet d'innovation",
@@ -1170,7 +1178,7 @@ const i18n = {
         project_doc_p11: "La solution logicielle ASOA 2.0 est conçue comme une plateforme IoT (Internet des Objets) complexe qui convertit les données brutes des capteurs en informations utiles et prédictives pour les conservateurs. Le système se compose d'un tableau de bord (Dashboard) basé sur le Web qui permet un contrôle total sur le processus de dessalement en temps réel.",
         project_doc_p12: "Au cœur de la communication se trouve le protocole MQTT, qui permet une connexion bidirectionnelle instantanée entre le matériel (ESP8266) et l'interface logicielle. Grâce à lui, le système reçoit non seulement des données sur la salinité et la température, mais permet également aux experts d'envoyer des commandes à l'appareil – par exemple, pour activer manuellement des pompes à eau ou des spirales rotatives. L'une des fonctions les plus critiques du logiciel est l'algorithme de détection de plateau (Plateau Detection). Le système analyse la dynamique d'extraction du sel et identifie automatiquement le moment où la concentration dans la solution cesse d'augmenter. C'est un indicateur clé que l'eau est saturée et que le processus de dessalement s'est arrêté. À ce moment, le logiciel peut décider de manière autonome de changer l'eau, optimisant ainsi le temps de conservation. Pour les besoins de reporting scientifique, le système est intégré à une base de données cloud (Supabase). Chaque artefact est enregistré dans une archive numérique où son historique complet est stocké – de la salinité initiale lors du retrait de la mer aux valeurs finales de purification. Le logiciel propose également une analyse prédictive qui, sur la base des données collectées, prévoit le temps nécessaire pour le dessalement complet d'un objet spécifique. L'interface utilisateur est construite avec un focus sur la fonctionnalité et la visualisation. Grâce à des graphiques interactifs (Chart.js), les conservateurs peuvent suivre visuellement l'ensemble du processus de dessalement, ce qui aide à détecter rapidement les anomalies.",
         docs_label: "Documents", docs_title: "Archives de l'équipe",
-        docs_desc: "Tout notre travail en un seul endroit — ouvert et accessible.",
+        docs_desc: "Tout notre travail en un seul endroit ouvert et accessible.",
         doc1: "Règles d'or de Mehano", doc2: "Instructions du robot",
         doc3: "Cahier d'ingénierie", doc4: "Modèles 3D",
         doc_open: "Ouvrir", docs_cta: "📁 Ouvrir Google Drive →",
@@ -1183,7 +1191,7 @@ const i18n = {
         location_label: "Emplacement", location_title: "Où la magie opère",
         location_desc: "Ici nous nous rencontrons, concevons et programmons notre robot.",
         location_school: "Lycée professionnel de mécatronique et d'électronique",
-        location_school_desc: "Notre base — le laboratoire STEM de l'école où chaque prototype et chaque idée naissent.",
+        location_school_desc: "Notre base le laboratoire STEM de l'école où chaque prototype et chaque idée naissent.",
         location_map_btn: "📍 Voir sur la carte",
         contact_label: "Contact", contact_title: "Contactez-nous",
         contact_desc: "Vous avez une question, une idée ou souhaitez devenir partenaire ? Écrivez-nous.",
@@ -1193,8 +1201,8 @@ const i18n = {
         value_teamwork: "Travail d'équipe", value_inclusion: "Inclusion", value_impact: "Impact",
         footer_text: "© 2026 Mehano. Tous droits réservés.",
         gr_label: "Règles d'Or",
-        gr_title: "Règles de Mehano",
-        gr_desc: "Notre philosophie d'ingénierie, notre code de compétition et notre esprit d'équipe — distillés en 30 règles.",
+        gr_title: "Règles d'Or de Mehano",
+        gr_desc: "Notre philosophie d'ingénierie, notre code de compétition et notre esprit d'équipe distillés en 30 règles.",
         gr_count: "30 Règles",
         back_to_docs: "← Retour aux Documents",
         gr_rule_1: "Le robot a toujours une position de départ strictement fixe.",
@@ -1203,7 +1211,7 @@ const i18n = {
         gr_rule_4: "Le design du robot doit être dense et optimisé.",
         gr_rule_5: "Le matériel et le logiciel doivent toujours fonctionner en synchronisation totale.",
         gr_rule_6: "Approche expérimentale : Chaque idée doit être testée en pratique.",
-        gr_rule_7: "Si quelque chose tourne mal — c'est toujours la faute du « robot ». On se soutient !",
+        gr_rule_7: "Si quelque chose tourne mal c'est toujours la faute du « robot ». On se soutient !",
         gr_rule_8: "« L'œil de l'observateur » : Une troisième personne vérifie toujours l'assemblage ou le code.",
         gr_rule_9: "Avant chaque course, les pneus sont nettoyés.",
         gr_rule_10: "Vérifiez que les goupilles sont bien insérées après chaque retour.",
@@ -1220,19 +1228,19 @@ const i18n = {
         gr_rule_21: "Le rire est la distance la plus courte entre deux idées.",
         gr_rule_22: "La loi du dixième de millimètre : on utilise chaque millimètre.",
         gr_rule_23: "La loi du « Juste Démarré » : La machine fonctionne parfaitement quand personne ne regarde.",
-        gr_rule_24: "Si ça marche — n'y touchez pas !",
+        gr_rule_24: "Si ça marche n'y touchez pas !",
         gr_rule_25: "Éparpillés comme des LEGO, assemblés comme un scalpel.",
         gr_rule_26: "Ayez toujours moteur, câble et batterie de rechange.",
         gr_rule_27: "En portant le t-shirt de l'équipe, on devient une légende.",
         gr_rule_28: "Trouvez ce qui n'est PAS interdit. On appelle ça « l'optimisation du règlement ».",
         gr_rule_29: "Soyez si précis que vous obtenez de meilleurs résultats en suivant les règles.",
-        gr_rule_30: "Après la compétition — on mange encore. L'amitié reste.",
+        gr_rule_30: "Après la compétition on mange encore. L'amitié reste.",
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
         name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristian Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Exécuter sur GitHub →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — Algorithme secret (ne pas montrer aux juges)</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Algorithme secret (ne pas montrer aux juges)</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">nourriture</span><span class="op">,</span> <span class="var">hasard</span><span class="op">,</span> <span class="var">rêves</span><span class="op">,</span> <span class="var">panique</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">espoir</span><span class="op">,</span> <span class="var">volonté</span><span class="op">,</span> <span class="var">aliments</span>
@@ -1253,7 +1261,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">tentatives</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">faire_quelque_chose_d_intelligent</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"Mission {mission} — succès ! 🎉")
+            <span class="fn">print</span>(f"Mission {mission} succès ! 🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoTombé</span>:
             <span class="fn">print</span>("Ils n\'ont rien vu... j\'espère 🙈")
@@ -1271,6 +1279,7 @@ const i18n = {
 <span class="fn">print</span>(<span class="fn">gagner_tournoi</span>())`,
     },
     ja: {
+        gr_rule_num: "ルール",
         site_logo: "Mehano",
         nav_home: "ホーム",
         nav_about: "私たちについて", nav_code: "コード", nav_project: "プロジェクト",
@@ -1294,7 +1303,7 @@ const i18n = {
         about_project_desc: "シーズンのテーマからインスピレーションを受けた創造的なアイデアで実際の問題を解決します。",
         about_video: "動画",
         about_values_title: "コアバリュー",
-        about_values_desc: "尊重、開放性、影響力、包容力、チームワーク、そして楽しみ — 私たちのDNA。",
+        about_values_desc: "尊重、開放性、影響力、包容力、チームワーク、そして楽しみ 私たちのDNA。",
         code_label: "コード", code_title: "私たちの勝利のコード",
         code_desc: "SPIKE Prime用のクリーンなPython。オープンソース、モジュラー、最適化済み。",
         project_label: "プロジェクト", project_title: "私たちのイノベーションプロジェクト",
@@ -1326,11 +1335,11 @@ const i18n = {
         project_doc_p11: "ASOA 2.0ソフトウェアソリューションは、生のセンサーデータをコンサベーターにとって有用で予測的な情報に変換する複雑なIoT（モノのインターネット）プラットフォームとして設計されています。システムはウェブベースのダッシュボードで構成されており、リアルタイムで脱塩プロセスを完全に制御できます。",
         project_doc_p12: "通信の核となるのはMQTTプロトコルで、ハードウェア（ESP8266）とソフトウェアインターフェース間の即時の双方向接続を可能にします。これを介して、システムは塩分と温度のデータを受信するだけでなく、専門家がデバイスにコマンドを送り戻すことも可能にします。例えば、ウォーターポンプや回転スパイラルを手動で作動させることができます。ソフトウェアの最も重要な機能の一つは、プラトー検出（Plateau Detection）アルゴリズムです。システムは塩分抽出のダイナミクスを分析し、溶液中の濃度上昇が止まった瞬間を自動的に特定します。これは、水が飽和し脱塩プロセスが停止したことを示す重要な指標です。この瞬間、ソフトウェアは自律的に水を変える決定を下し、保存時間を最適化できます。科学的なレポート作成のニーズに対応するため、システムはクラウドデータベース（Supabase）と統合されています。各遺物はデジタルアーカイブに登録され、海から取り出された時の初期塩分濃度から最終的な浄化値まで、その完全な履歴が保存されます。ソフトウェアは収集されたデータに基づいて、特定の物体の完全な脱塩にかかる時間を予測する分析も提供します。ユーザーインターフェースは、機能性と可視化に焦点を当てて構築されています。インタラクティブなグラフ（Chart.js）を通じて、コンサベーターは脱塩プロセス全体を視覚的に追跡でき、異常の迅速な検出に役立ちます。",
         docs_label: "ドキュメント", docs_title: "チームアーカイブ",
-        docs_desc: "私たちのすべての作業が一箇所に — オープンでアクセス可能。",
-        doc1: "Механоのゴールデンルール", doc2: "ロボット指示",
+        docs_desc: "私たちのすべての作業が一箇所に オープンでアクセス可能。",
+        doc1: "Mehanoのゴールデンルール", doc2: "ロボット指示",
         doc3: "エンジニアリングノートブック", doc4: "3Dモデル",
         doc_open: "開く", docs_cta: "📁 Google Driveを開く →",
-        team_label: "チーム", team_title: "Механоの人々",
+        team_label: "チーム", team_title: "Mehanoの人々",
         team_desc: "9つのユニークな心。一つの共通の使命。",
         mentor: "メンター", role_mentor: "メンター", role_programmer: "プログラマー",
         role_tech: "テクニシャン", role_builder: "ビルダー", role_3d: "3Dモデリング", role_research: "リサーチ",
@@ -1339,7 +1348,7 @@ const i18n = {
         location_label: "場所", location_title: "魔法が起こる場所",
         location_desc: "ここで集まり、設計し、ロボットをプログラムします。",
         location_school: "メカトロニクス・エレクトロニクス職業高校",
-        location_school_desc: "私たちのベース — すべてのプロトタイプとアイデアが生まれる学校のSTEMラボ。",
+        location_school_desc: "私たちのベース すべてのプロトタイプとアイデアが生まれる学校のSTEMラボ。",
         location_map_btn: "📍 地図で見る",
         contact_label: "連絡", contact_title: "お問い合わせ",
         contact_desc: "質問、アイデア、またはパートナーになりたいですか？ご連絡ください。",
@@ -1349,7 +1358,7 @@ const i18n = {
         value_teamwork: "チームワーク", value_inclusion: "包含", value_impact: "インパクト",
         footer_text: "© 2025 Mehano. 無断複写・転載を禁じます。",
         gr_label: "ゴールデンルール",
-        gr_title: "Mehano のルール",
+        gr_title: "Mehano ゴールデンルール",
         gr_desc: "私たちのエンジニアリング哲学、競技コード、そしてチームスピリット。30のルールに凝縮されました。",
         gr_count: "30のルール",
         back_to_docs: "← ドキュメントに戻る",
@@ -1388,7 +1397,7 @@ const i18n = {
         name_ivan: "イヴァン・パショフ", name_dilyan: "ディリャン・ヨルダノフ", name_kristian: "クリスティヤン・ペトコフ",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ GitHubで実行 →",
-        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 — 秘密のアルゴリズム（審査員に見せないでください）</span>
+        code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 秘密のアルゴリズム（審査員に見せないでください）</span>
 
 <span class="kw">import</span> <span class="var">spike</span><span class="op">,</span> <span class="var">food</span><span class="op">,</span> <span class="var">random</span><span class="op">,</span> <span class="var">dreams</span><span class="op">,</span> <span class="var">panic</span>
 <span class="kw">from</span> <span class="var">mehano</span> <span class="kw">import</span> <span class="var">hope</span><span class="op">,</span> <span class="var">will</span><span class="op">,</span> <span class="var">food_items</span>
@@ -1409,7 +1418,7 @@ const i18n = {
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">attempts</span>):
         <span class="kw">try</span>:
             <span class="var">robot</span>.<span class="fn">do_something_smart</span>(<span class="var">mission</span>)
-            <span class="fn">print</span>(f"ミッション {mission} — 成功！🎉")
+            <span class="fn">print</span>(f"ミッション {mission} 成功！🎉")
             <span class="kw">break</span>
         <span class="kw">except</span> <span class="cls">LegoFellOff</span>:
             <span class="fn">print</span>("彼らは見ていなかった...願わくば 🙈")
@@ -1498,15 +1507,23 @@ window.addEventListener('scroll', () => {
 });
 
 // Reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        }
-    });
-}, { threshold: 0.1 });
-reveals.forEach(el => observer.observe(el));
+function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                // Add a small delay for staggered animation if they appear at once
+                setTimeout(() => entry.target.classList.add('visible'), i * 50);
+            }
+        });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+}
+
+// Expose to window for dynamic content (like golden-rules.html)
+window.initReveal = initReveal;
+document.addEventListener('DOMContentLoaded', initReveal);
+initReveal(); // Run once immediately in case DOM is already ready
 
 // ─── FLOATING LANGUAGE SWITCHER FAB ───
 function initLangFab() {
