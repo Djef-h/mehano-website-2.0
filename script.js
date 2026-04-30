@@ -1,10 +1,13 @@
 // ─── TRANSLATIONS ───
 const i18n = {
     bg: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Инструкции на робота",
+
+        robot_instr_desc: "Подробни PDF инструкции за сглобяване на нашия робот и приставки.",
+
+        instr_robot: "Основен робот",
+
+        instr_run: "Мисия",
 
         site_logo: "Механо",
         nav_home: "Начало",
@@ -165,10 +168,13 @@ const i18n = {
     },
     
     en: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Robot Instructions",
+
+        robot_instr_desc: "Detailed PDF instructions for building our robot and attachments.",
+
+        instr_robot: "Base Robot",
+
+        instr_run: "Run",
 
 
         site_logo: "Mehano",
@@ -330,10 +336,13 @@ const i18n = {
     },
     
     el: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Οδηγίες Ρομπότ",
+
+        robot_instr_desc: "Λεπτομερείς οδηγίες PDF για την κατασκευή του ρομπότ μας.",
+
+        instr_robot: "Βασικό Ρομπότ",
+
+        instr_run: "Run",
         site_logo: "Μεχανο",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
@@ -443,10 +452,13 @@ const i18n = {
 
     },
     zh: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "机器人指令",
+
+        robot_instr_desc: "用于构建我们的机器人和附件的详细 PDF 指令。",
+
+        instr_robot: "基础机器人",
+
+        instr_run: "任务",
 
         site_logo: "Mehano",
         nav_home: "首页",
@@ -607,10 +619,13 @@ const i18n = {
     },
     
     pt: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Instruções do Robô",
+
+        robot_instr_desc: "Instruções PDF λεπτομερείς για την κατασκευή του ρομπότ μας.",
+
+        instr_robot: "Robô Base",
+
+        instr_run: "Missão",
 
         gr_rule_num: "REGRA",
         site_logo: "Mehano",
@@ -772,10 +787,13 @@ const i18n = {
     },
     
     es: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Instrucciones del Robot",
+
+        robot_instr_desc: "Instrucciones detalladas en PDF para construir nuestro robot y accesorios.",
+
+        instr_robot: "Robot Base",
+
+        instr_run: "Misión",
 
         gr_rule_num: "REGLA",
         site_logo: "Mehano",
@@ -938,10 +956,13 @@ const i18n = {
     
 
         de: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Roboter-Anleitungen",
+
+        robot_instr_desc: "Detaillierte PDF-Anleitungen zum Bau unseres Roboters und der Anbauten.",
+
+        instr_robot: "Basis-Roboter",
+
+        instr_run: "Mission",
 
         gr_rule_num: "REGEL",
         site_logo: "Mehano",
@@ -1102,10 +1123,13 @@ const i18n = {
     },
     
     fr: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "Instructions du Robot",
+
+        robot_instr_desc: "Instructions PDF détaillées pour la construction de notre robot et de ses accessoires.",
+
+        instr_robot: "Robot de base",
+
+        instr_run: "Mission",
 
         gr_rule_num: "RÈGLE",
         site_logo: "Mehano",
@@ -1266,10 +1290,13 @@ const i18n = {
     },
     
     ja: {
-        robot_instr_title: "{new_keys_base['robot_instr_title'][lang]}",
-        robot_instr_desc: "{new_keys_base['robot_instr_desc'][lang]}",
-        instr_robot: "{new_keys_base['instr_robot'][lang]}",
-        instr_run: "{new_keys_base['instr_run'][lang]}",
+        robot_instr_title: "ロボットの説明書",
+
+        robot_instr_desc: "ロボットとアタッチメントを構築するための詳細なPDF手順。",
+
+        instr_robot: "ベースロボット",
+
+        instr_run: "ミッション",
 
         gr_rule_num: "ルール",
         site_logo: "Mehano",
