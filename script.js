@@ -353,7 +353,7 @@ const i18n = {
         instr_robot: "Βασικό Ρομπότ",
 
         instr_run: "Run",
-        site_logo: "Μεχανο",
+        site_logo: "Mehano",
         nav_home: "Αρχική",
         nav_about: "Σχετικά", nav_code: "Κώδικας", nav_project: "Έργο",
         nav_docs: "Έγγραφα", nav_team: "Ομάδα", nav_location: "Τοποθεσία", nav_contact: "Επικοινωνία",
