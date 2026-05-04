@@ -262,29 +262,13 @@
             transform: translateX(-3px);
         }
 
-        /* Full Page Loader consistency */
-        main {
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-        main.content-visible {
-            opacity: 1;
-        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- FULL PAGE LOADER -->
-    <div id="site-loader">
-        <div class="loader-inner">
-            <div class="loader-logo" data-i18n-html="site_logo">МЕХА<span>НО</span></div>
-            <div class="loader-spinner-container">
-                <div class="loader-spinner-circle"></div>
-            </div>
-            <div class="loader-status" data-i18n="models_loading">ЗАРЕЖДАНΕ...</div>
-        </div>
-    </div>
+
 
     <!-- NAVBAR -->
     <nav id="navbar">
@@ -514,12 +498,8 @@
 
                 loaderOverlay.classList.add('fade-out');
 
-                // Dismiss full page loader on first load
+                // Dismiss full page loader on first load (Removed)
                 if (isFirstLoad) {
-                    const siteLoader = document.getElementById('site-loader');
-                    const main = document.querySelector('main');
-                    if (siteLoader) siteLoader.classList.add('fade-out');
-                    if (main) main.classList.add('content-visible');
                     isFirstLoad = false;
                 }
             },             (xhr) => {

@@ -64,13 +64,7 @@
             bottom: 14px;
             right: 14px;
         }
-        main {
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-        main.content-visible {
-            opacity: 1;
-        }
+
         @media (max-width: 600px) {
             model-viewer { height: 280px; }
         }
@@ -86,16 +80,7 @@
 
 <body>
 
-    <!-- FULL PAGE LOADER -->
-    <div id="site-loader">
-        <div class="loader-inner">
-            <div class="loader-logo" data-i18n-html="site_logo">МЕХА<span>НО</span></div>
-            <div class="loader-spinner-container">
-                <div class="loader-spinner-circle"></div>
-            </div>
-            <div class="loader-status" data-i18n="models_loading">ЗАРЕЖДАНΕ...</div>
-        </div>
-    </div>
+
 
     <!-- NAVBAR -->
     <nav id="navbar">
@@ -260,35 +245,7 @@
         </button>
     </div>
 <script src="script.js"></script>
-<script>
-    // Project page specific loader logic
-    document.addEventListener('DOMContentLoaded', () => {
-        const modelViewer = document.querySelector('model-viewer');
-        const loader = document.getElementById('site-loader');
-        const main = document.querySelector('main');
-        
-        const revealContent = () => {
-            if (loader) loader.classList.add('fade-out');
-            if (main) main.classList.add('content-visible');
-        };
 
-        if (modelViewer) {
-            // Check if already loaded
-            if (modelViewer.loaded) {
-                revealContent();
-            } else {
-                modelViewer.addEventListener('load', () => {
-                    revealContent();
-                });
-            }
-            
-            // Fallback: reveal anyway if model takes too long (e.g. 8s)
-            setTimeout(revealContent, 8000);
-        } else {
-            revealContent();
-        }
-    });
-</script>
 </body>
 
 </html>
