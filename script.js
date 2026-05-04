@@ -1677,32 +1677,23 @@ if (document.readyState === 'loading') {
     fullLangInit();
 }
 
-// Hold to play team videos
-function initTeamVideoHold() {
+// Hover to play team videos
+function initTeamVideoHover() {
     const teamCards = document.querySelectorAll('.team-card');
     teamCards.forEach(card => {
         const video = card.querySelector('video');
-        if (!video) return;
-
-        function startPlay() {
-            video.play().catch(e => console.log("Video play failed:", e));
+        if (video) {
+            card.addEventListener('mouseenter', () => {
+                video.play().catch(e => console.log("Video play failed:", e));
+            });
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                // Optional: reset to beginning if you want
+                // video.currentTime = 0;
+            });
         }
-        function stopPlay() {
-            video.pause();
-            video.currentTime = 0;
-        }
-
-        // Desktop: hold mouse button
-        card.addEventListener('mousedown', startPlay);
-        card.addEventListener('mouseup', stopPlay);
-        card.addEventListener('mouseleave', stopPlay);
-
-        // Mobile: hold finger
-        card.addEventListener('touchstart', (e) => { e.preventDefault(); startPlay(); }, { passive: false });
-        card.addEventListener('touchend', stopPlay);
-        card.addEventListener('touchcancel', stopPlay);
     });
 }
 
-document.addEventListener('DOMContentLoaded', initTeamVideoHold);
-initTeamVideoHold();
+document.addEventListener('DOMContentLoaded', initTeamVideoHover);
+initTeamVideoHover(); // Run immediately in case DOM is ready
