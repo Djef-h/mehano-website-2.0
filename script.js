@@ -130,7 +130,7 @@ const i18n = {
         gr_rule_30: "„След състезанието – пак ядем“: Независимо от резултата, отборът отива да празнува. Победите се споделят, но приятелството е това, което остава.",
         name_boyana: "инж. Бояна Георгиева", name_nikola: "инж. Никола Чанев", name_djefer: "Джефер Ходжов",
         name_boris: "Борис Царев", name_deyvid: "Дейвид Желязков", name_danail: "Данаил Хитров",
-        name_ivan: "Иван Пашов", name_dilyan: "Дилян Йорданов", name_kristian: "Кристиан Петков",
+        name_ivan: "Иван Пашов", name_dilyan: "Дилян Йорданов", name_kristian: "Кристиян Петков",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Изпълни в GitHub →",
         code_snippet: `<span class="cm"># ⚙️ МЕХАНО v2.0 Секретен алгоритъм (не показвай на съдиите)</span>
