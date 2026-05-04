@@ -1204,6 +1204,30 @@ span.link-chip {
     gap: 32px;
 }
 
+.team-group {
+    margin-top: 48px;
+}
+
+.team-group-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--accent3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-group-title::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background: var(--accent2);
+    border-radius: 99px;
+}
+
+
 .team-card {
     background: #0d0d0f;
     border: 1px solid rgba(255, 255, 255, 0.05);
