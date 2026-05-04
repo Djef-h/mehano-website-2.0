@@ -447,7 +447,7 @@ const i18n = {
         doc1: "Χρυσοί Κανόνες της Mehano", doc2: "Οδηγίες Ρομπότ",
         doc3: "Μηχανικό Σημειωματάριο", doc4: "3D Μοντέλα",
         doc_open: "Άνοιγμα", docs_cta: "📁 Άνοιγμα Google Drive →",
-        team_label: "Ομάδα", team_title: "Οι Άνθρωποι πίσω από τη Μεχανο",
+        team_label: "Ομάδα", team_title: "Οι Άνθρωποι πίσω από τη Mehano",
         team_desc: "Εννέα μοναδικά μυαλά. Μία κοινή αποστολή.",
         mentor: "Μέντορας", role_mentor: "Μέντορας", role_programmer: "Προγραμματιστής",
         role_tech: "Τεχνικός", role_builder: "Κατασκευαστής", role_3d: "3D Μοντελοποίηση", role_research: "Έρευνα",
