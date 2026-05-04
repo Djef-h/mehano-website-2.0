@@ -636,7 +636,7 @@ const i18n = {
         gr_rule_30: "“比赛结束后——我们再吃一顿”：无论结果如何，团队都会庆祝。胜利是共享的，但友谊是永恒的。",
         name_boyana: "博亚娜·格奥尔基耶娃", name_nikola: "尼古拉·查内夫", name_djefer: "杰费尔·霍乔夫",
         name_boris: "鲍里斯·察列夫", name_deyvid: "戴维·热利亚兹科夫", name_danail: "丹尼尔·希特罗夫",
-        name_ivan: "伊万·帕肖夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂扬·佩特科夫",
+        name_ivan: "伊万·帕肖夫", name_dilyan: "迪利安·约尔丹诺夫", name_kristian: "克里斯蒂安·佩特科夫",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ 在 GitHub 上运行 →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 秘密算法（不要给评委看）</span>
@@ -808,7 +808,7 @@ const i18n = {
         gr_rule_30: "«Depois da competição – comemos de novo»: Independentemente do resultado, a equipa celebra. As vitórias são partilhadas, mas a amizade é o que resta.",
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
-        name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
+        name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristian Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Executar no GitHub →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Algoritmo secreto (não mostre aos juízes)</span>
@@ -981,7 +981,7 @@ const i18n = {
         gr_rule_30: "«Después de la competencia, volvemos a comer»: independientemente del resultado, el equipo celebra. Las victorias se comparten, pero la amistad es lo que queda.",
         name_boyana: "Boyana Georgieva", name_nikola: "Nikola Chanev", name_djefer: "Djefer Hodzhov",
         name_boris: "Boris Tsarev", name_deyvid: "Deyvid Zhelyazkov", name_danail: "Danail Hitrov",
-        name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristiyan Petkov",
+        name_ivan: "Ivan Pashov", name_dilyan: "Dilyan Yordanov", name_kristian: "Kristian Petkov",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ Ejecutar en GitHub →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 Algoritmo secreto (no mostrar a los jueces)</span>
@@ -1498,7 +1498,7 @@ const i18n = {
         gr_rule_30: "「大会の後は、また食べる」：結果に関わらず、チームは祝います。勝利は共有されますが、残るのは友情です。",
         name_boyana: "ボヤナ・ゲオルギエワ", name_nikola: "ニコラ・チャネフ", name_djefer: "ジェフェル・ホジョフ",
         name_boris: "ボリス・ツァレフ", name_deyvid: "デイビッド・ゼリャズコフ", name_danail: "ダナイル・ヒトロフ",
-        name_ivan: "イヴァン・パショフ", name_dilyan: "ディリャン・ヨルダノフ", name_kristian: "クリスティヤン・ペトコフ",
+        name_ivan: "イヴァン・パショフ", name_dilyan: "ディリャン・ヨルダノフ", name_kristian: "クリスティアン・ペトコフ",
         code_filename: "mehano_bot.py", code_badge: "PYTHON 3",
         code_action: "▶ GitHubで実行 →",
         code_snippet: `<span class="cm"># ⚙️ MEHANO v2.0 秘密のアルゴリズム（審査員に見せないでください）</span>
