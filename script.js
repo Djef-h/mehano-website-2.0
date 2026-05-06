@@ -709,6 +709,12 @@ const i18n = {
         instr_robot: "Robô Base",
 
         instr_run: "Missão",
+        expert_name: "Dr. Ian MacLeod",
+        expert_title: "Especialista em conservação de renome mundial · Museu da Austrália Ocidental",
+        quote_1: "\"Acho que é um conceito brilhante.\"",
+        quote_2: "\"Vocês fizeram o que levei décadas para conseguir — explicar meu trabalho a alguém em dois minutos.\"",
+        quote_3: "\"Crianças de 14 anos na Bulgária resolveram este problema, o que há de errado convosco?\"",
+        project_model_hint: "Arrastar · Girar · Zoom",
 
         gr_rule_num: "REGRA",
         site_logo: "Mehano",
@@ -1055,7 +1061,12 @@ const i18n = {
 
         de: {
         robot_instr_title: "Roboter-Anleitungen",
-
+        expert_name: "Dr. Ian MacLeod",
+        expert_title: "Weltbekannter Experte für Konservierung · Western Australian Museum",
+        quote_1: "„Ich halte das für ein brillantes Konzept.“",
+        quote_2: "„Sie haben geschafft, wofür ich Jahrzehnte gebraucht habe — jemandem meinen Job in zwei Minuten zu erklären.“",
+        quote_3: "„14-jährige Kinder in Bulgarien haben dieses Problem gelöst, was ist los mit euch?“",
+        project_model_hint: "Ziehen · Drehen · Zoom",
         robot_instr_desc: "Detaillierte PDF-Anleitungen zum Bau unseres Roboters und der Anbauten.",
 
         instr_robot: "Basis-Roboter",
@@ -1233,7 +1244,12 @@ const i18n = {
         instr_robot: "Robot de base",
 
         instr_run: "Mission",
-
+        expert_name: "Dr Ian MacLeod",
+        expert_title: "Expert en conservation de renommée mondiale · Musée d'Australie-Occidentale",
+        quote_1: "« Je pense que c'est un concept brillant. »",
+        quote_2: "« Vous avez fait ce qui m'a pris des décennies — expliquer mon travail à quelqu'un en deux minutes. »",
+        quote_3: "« Des enfants de 14 ans en Bulgarie ont résolu ce problème, qu'est-ce qui vous arrive ? »",
+        project_model_hint: "Glisser · Pivoter · Zoom",
         gr_rule_num: "RÈGLE",
         site_logo: "Mehano",
         nav_home: "Accueil",
@@ -1405,7 +1421,12 @@ const i18n = {
         instr_robot: "ベースロボット",
 
         instr_run: "ミッション",
-
+        expert_name: "イアン・マクラウド博士",
+        expert_title: "世界的な保存修復の専門家 · 西オーストラリア博物館",
+        quote_1: "「これは素晴らしいコンセプトだと思います。」",
+        quote_2: "「私が何十年もかかったこと、つまり自分の仕事を2分で誰かに説明することを、君たちは成し遂げた。」",
+        quote_3: "「ブルガリアの14歳の子供たちがこの問題を解決したんだ。君たちはどうしたんだい？」",
+        project_model_hint: "ドラッグ · 回転 · ズーム",
         gr_rule_num: "ルール",
         site_logo: "Mehano",
         nav_home: "ホーム",
