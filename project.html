@@ -39,61 +39,96 @@
             font-weight: 600;
             font-size: 0.9rem;
         }
+        .project-model-hint {
+            margin-left: auto;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            opacity: 0.65;
+        }
         model-viewer {
             width: 100%;
             height: 420px;
             background: transparent;
+            --poster-color: transparent;
         }
 
-        /* КАРТА ЗА ПРОФЕСОРА */
-        .professor-quote-card {
-            background: #fff;
+        /* Стил за картата на професора */
+        .prof-quote-card {
+            max-width: 650px;
+            margin: 40px auto;
+            background: white;
+            border: 1px solid #e5e7eb;
             border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            border: 1px solid rgba(0,0,0,0.05);
-            animation: fadeIn 1s ease;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
         }
-        .prof-img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
+        .prof-quote-card:hover {
+            transform: translateY(-5px);
+        }
+        .prof-img-container {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+        .prof-img-container img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 3px solid #6366f1;
-            flex-shrink: 0;
+            object-position: top;
         }
-        .quote-content {
+        .prof-info {
+            padding: 24px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .prof-name {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        .prof-title {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: #6366f1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .quotes-list {
+            padding: 24px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 16px;
+            background: #fafafa;
         }
         .quote-item {
-            font-size: 0.88rem;
+            border-left: 3px solid #6366f1;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .quote-text {
+            margin: 0;
+            font-size: 0.95rem;
             font-style: italic;
-            color: #4b5563;
-            border-left: 2px solid #e5e7eb;
-            padding-left: 12px;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #374151;
         }
 
-        @media (max-width: 768px) {
-            .project-sections { flex-direction: column; }
-            .professor-quote-card { flex-direction: column; text-align: center; }
-            .quote-item { border-left: none; padding-left: 0; }
+        @media (max-width: 600px) {
+            model-viewer { height: 280px; }
+            .prof-img-container { height: 240px; }
         }
     </style>
     <link rel="icon" type="image/jpeg" href="assets/teammehano_logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <!-- NAVBAR -->
     <nav id="navbar">
         <div class="nav-pill">
@@ -101,13 +136,12 @@
                 <img src="assets/teammehano_logo.jpg" alt="Механо Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> <span data-i18n="nav_home">Начало</span></a></li>
-                <li><a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span data-i18n="nav_about">За нас</span></a></li>
-                <li><a href="code.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> <span data-i18n="nav_code">Код</span></a></li>
-                <li class="active"><a href="project.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 22 4-10 4 10"/></svg> <span data-i18n="nav_project">Проект</span></a></li>
-                <li><a href="docs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14.5 2 14.5 7 20 7"/></svg> <span data-i18n="nav_docs">Документи</span></a></li>
-                <li><a href="team.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="nav_team">Отбор</span></a></li>
-                <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span data-i18n="nav_contact">Контакт</span></a></li>
+                <li><a href="index.html"> <span data-i18n="nav_home">Начало</span></a></li>
+                <li><a href="about.html"> <span data-i18n="nav_about">За нас</span></a></li>
+                <li class="active"><a href="project.html"> <span data-i18n="nav_project">Проект</span></a></li>
+                <li><a href="docs.html"> <span data-i18n="nav_docs">Документи</span></a></li>
+                <li><a href="team.html"> <span data-i18n="nav_team">Отбор</span></a></li>
+                <li><a href="contact.html"> <span data-i18n="nav_contact">Контакт</span></a></li>
             </ul>
         </div>
     </nav>
@@ -122,62 +156,62 @@
 
                 <div class="project-card reveal">
                     <div class="project-card-header">
-                        <div class="project-card-title">project.md</div>
-                        <div class="project-version">v3.0</div>
+                        <div class="project-card-title">ASOA v3.0</div>
+                        <div class="project-version">Stable</div>
                     </div>
+                    
                     <div class="project-body">
-                        <h3 data-i18n="project_name">Автоматизирана система за обесоляване на артефакти</h3>
+                        <h3 data-i18n="project_name">Автоматизирана система за обезсоляване на артефакти</h3>
                         
-                        <div class="project-sections" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
-                            <!-- ИНФОРМАЦИЯ -->
-                            <div style="flex: 1.2; min-width: 300px;">
-                                <div class="project-section">
-                                    <div class="project-section-icon problem">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                                    </div>
-                                    <div>
-                                        <h4 data-i18n="project_problem_label">Проблем</h4>
-                                        <p data-i18n="project_problem">Традиционното обезсоляване на морски артефакти е бавен и неточен процес.</p>
-                                    </div>
+                        <!-- Карта на Професора -->
+                        <div class="prof-quote-card">
+                            <div class="prof-img-container">
+                                <img src="https://visit.museum.wa.gov.au/sites/default/files/2025/02/imported-news-feature-images/Ian-MacLeod.jpg" alt="Д-р Иан Маклеод">
+                            </div>
+                            <div class="prof-info">
+                                <p class="prof-name" data-i18n="prof_name">Д-р Иан Маклеод</p>
+                                <p class="prof-title" data-i18n="prof_title">Световен експерт по консервация</p>
+                            </div>
+                            <div class="quotes-list">
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_1">"So I think it's a brilliant concept."</p>
                                 </div>
-                                <div class="project-section">
-                                    <div class="project-section-icon solution">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-                                    </div>
-                                    <div>
-                                        <h4 data-i18n="project_solution_label">Решение</h4>
-                                        <p data-i18n="project_solution">Системата ASOA 3.0 автоматизира мониторинга чрез IoT платформа и научен алгоритъм.</p>
-                                    </div>
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_2">"14 year old children in Bulgaria have solved this problem."</p>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_3">"You've done what took me decades to be able to do — explaining my job in two minutes."</p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- КАРТА НА ПРОФЕСОРА -->
-                            <div class="professor-quote-card" style="flex: 1; min-width: 300px;">
-                                <img src="https://visit.museum.wa.gov.au/sites/default/files/styles/manual_crop_square_extra_large/public/2023-03/Ian%20MacLeod.jpg" alt="Dr. Ian MacLeod" class="prof-img">
-                                <div class="quote-content">
-                                    <div>
-                                        <strong style="display: block; font-size: 1.1rem;" data-i18n="prof_name">Д-р Иан Маклеод</strong>
-                                        <small style="color: #6366f1; font-weight: 600;" data-i18n="prof_title">Световен експерт по консервация</small>
-                                    </div>
-                                    <div class="quote-item" data-i18n="prof_quote_1">"So I think it's a brilliant concept."</div>
-                                    <div class="quote-item" data-i18n="prof_quote_2">"14 year old children in Bulgaria have solved this problem."</div>
-                                </div>
+                        <!-- Инфо секции -->
+                        <div class="project-sections">
+                            <div class="project-section">
+                                <h4 data-i18n="project_problem_label">Проблем</h4>
+                                <p data-i18n="project_problem">Традиционното обезсоляване е бавен и неточен ръчен процес.</p>
+                            </div>
+                            <div class="project-section">
+                                <h4 data-i18n="project_solution_label">Решение</h4>
+                                <p data-i18n="project_solution">ASOA автоматизира мониторинга чрез IoT платформа.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3D МОДЕЛ -->
+                    <!-- 3D MODEL VIEWER -->
                     <div class="project-model-wrap">
                         <div class="project-model-header">
                             <span class="project-model-badge">3D Model</span>
-                            <span class="project-model-label">ASOA 3.0 &mdash; Interactive Preview</span>
+                            <span class="project-model-label">ASOA 3.0 Preview</span>
+                            <span class="project-model-hint">Drag to rotate</span>
                         </div>
                         <model-viewer
                             src="assets/project3dmodel.glb"
-                            alt="ASOA 3.0 Model"
+                            alt="3D Model"
                             auto-rotate
                             camera-controls
                             shadow-intensity="1"
+                            environment-image="neutral"
                             ar
                         >
                         </model-viewer>
@@ -195,7 +229,7 @@
     <footer id="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo" data-i18n-html="site_logo">МЕХА<span>НО</span></div>
+                <div class="footer-logo">МЕХА<span>НО</span></div>
             </div>
         </div>
     </footer>
