@@ -1,155 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Механо</title>
-    <!-- Preload 3D model for faster loading -->
+    <title>Механо - Проект</title>
     <link rel="preload" href="assets/project3dmodel.glb" as="fetch" crossorigin="anonymous">
-    <!-- model-viewer for 3D GLB rendering -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-    <style>
-        .project-model-wrap {
-            margin: 28px 0 8px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.04) 100%);
-        }
-        .project-model-header {
-            padding: 12px 20px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .project-model-badge {
-            background: #000;
-            color: #fff;
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            padding: 3px 10px;
-            border-radius: 999px;
-            text-transform: uppercase;
-        }
-        .project-model-label {
-            color: var(--text-primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .project-model-hint {
-            margin-left: auto;
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-            opacity: 0.65;
-        }
-        model-viewer {
-            width: 100%;
-            height: 420px;
-            background: transparent;
-            --poster-color: transparent;
-        }
-        model-viewer::part(default-progress-bar) {
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            height: 3px;
-        }
-        model-viewer::part(default-ar-button) {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-weight: 600;
-            bottom: 14px;
-            right: 14px;
-        }
-
-        @media (max-width: 600px) {
-            model-viewer { height: 280px; }
-        }
-    </style>
     <link rel="icon" type="image/jpeg" href="assets/teammehano_logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .professor-quote-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .prof-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #6366f1;
+            flex-shrink: 0;
+        }
+        .quote-content { display: flex; flex-direction: column; gap: 10px; }
+        .quote-item {
+            font-size: 0.88rem;
+            font-style: italic;
+            color: #4b5563;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 12px;
+        }
+        model-viewer { width: 100%; height: 420px; background: transparent; }
+        @media (max-width: 768px) {
+            .professor-quote-card { flex-direction: column; text-align: center; }
+            .quote-item { border-left: none; padding-left: 0; }
+        }
+    </style>
 </head>
-
 <body>
-
-
-
- <div class="project-body">
-    <h3 data-i18n="project_name">Автоматизирана система за обесоляване на артефакти</h3>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; margin-top: 20px;">
-        
-        <!-- ЛЯВО: Проект инфо -->
-        <div class="project-sections">
-            <div class="project-section">
-                <div class="project-section-icon problem">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                </div>
-                <div>
-                    <h4 data-i18n="project_problem_label">Проблем</h4>
-                    <p data-i18n="project_problem">Традиционното обезсоляване на морски артефакти е бавен, изцяло ръчен и неточен процес, който изисква консерваторите да пътуват стотици километри за рутинни измервания.</p>
-                </div>
-            </div>
-            <div class="project-section">
-                <div class="project-section-icon solution">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-                </div>
-                <div>
-                    <h4 data-i18n="project_solution_label">Решение</h4>
-                    <p data-i18n="project_solution">Системата ASOA 2.0 автоматизира мониторинга и управлението на дезалинацията чрез IoT платформа и научен алгоритъм, позволяващ на експертите да следят процеса в реално време.</p>
-                </div>
-            </div>
-            <div class="project-section">
-                <div class="project-section-icon impact">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                </div>
-                <div>
-                    <h4 data-i18n="project_impact_label">Въздействие</h4>
-                    <p data-i18n="project_impact">Внедряването на ASOA 2.0 съкращава времето за консервация с месеци, минимизира грешките и разходите за логистика, гарантирайки спасяването на световното подводно културно наследство.</p>
-                </div>
-            </div>
+    <nav id="navbar">
+        <div class="nav-pill">
+            <div class="nav-profile"><img src="assets/teammehano_logo.jpg" alt="Logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html"><span>Начало</span></a></li>
+                <li><a href="about.html"><span>За нас</span></a></li>
+                <li class="active"><a href="project.html"><span>Проект</span></a></li>
+                <li><a href="docs.html"><span>Документи</span></a></li>
+                <li><a href="team.html"><span>Отбор</span></a></li>
+                <li><a href="contact.html"><span>Контакт</span></a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- ДЯСНО: Карта с проф. Маклеод -->
-        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
-            <img src="https://visit.museum.wa.gov.au/sites/default/files/2025/02/imported-news-feature-images/Ian-MacLeod.jpg" alt="Д-р Иан Маклеод" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block;">
-            <div style="padding: 16px 20px 8px;">
-                <p style="margin: 0; font-size: 16px; font-weight: 600;">Д-р Иан Маклеод</p>
-                <p style="margin: 4px 0 0; font-size: 12px; color: #6b7280;">Световноизвестен експерт по консервация · Западноавстралийски музей</p>
+    <main style="padding-top: 100px;">
+        <section id="project">
+            <div class="container">
+                <div class="reveal">
+                    <div class="section-label" data-i18n="project_label">Проект</div>
+                    <h2 class="section-title" data-i18n="project_title">Нашият иновативен проект</h2>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <div class="project-card-title">project.md</div>
+                        <div class="project-version">v3.0</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 data-i18n="project_name">Автоматизирана система за обесоляване</h3>
+                        
+                        <div class="project-sections" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                            <div style="flex: 1; min-width: 300px;">
+                                <div class="project-section">
+                                    <h4 data-i18n="project_problem_label">Проблем</h4>
+                                    <p data-i18n="project_problem">Традиционното обезсоляване е бавен и неточен процес.</p>
+                                </div>
+                                <div class="project-section">
+                                    <h4 data-i18n="project_solution_label">Решение</h4>
+                                    <p data-i18n="project_solution">ASOA 3.0 автоматизира мониторинга чрез IoT.</p>
+                                </div>
+                            </div>
+
+                            <!-- КАРТА НА ПРОФЕСОРА -->
+                            <div class="professor-quote-card" style="flex: 1; min-width: 300px;">
+                                <img src="https://visit.museum.wa.gov.au/sites/default/files/styles/manual_crop_square_extra_large/public/2023-03/Ian%20MacLeod.jpg" alt="Dr. Ian MacLeod" class="prof-img">
+                                <div class="quote-content">
+                                    <div>
+                                        <strong style="display:block" data-i18n="prof_name">Д-р Иан Маклеод</strong>
+                                        <small style="color:#6366f1" data-i18n="prof_title">Експерт по консервация</small>
+                                    </div>
+                                    <div class="quote-item" data-i18n="prof_quote_1">"So I think it's a brilliant concept."</div>
+                                    <div class="quote-item" data-i18n="prof_quote_2">"14 year old children solved this problem."</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <model-viewer src="assets/project3dmodel.glb" auto-rotate camera-controls></model-viewer>
+
+                    <div class="project-footer">
+                        <a href="docs.html" class="btn-secondary" data-i18n="project_docs">📄 Документация</a>
+                        <!-- НОВИЯТ ЛИНК 3.0 -->
+                        <a href="https://asoa-3-0.vercel.app/" target="_blank" class="btn-primary" data-i18n="project_site">🌐 Виж сайта</a>
+                    </div>
+                </div>
             </div>
-            <div style="padding: 10px 20px 20px; display: flex; flex-direction: column; gap: 10px;">
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"So I think it's a brilliant concept."</p>
-                </div>
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"One of the problems to remotely manage ship finds — you cannot always be there, the logistics are 5 hours."</p>
-                </div>
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"You will find that as you start working on these objects they will begin to speak to you. They are real to me, they are alive and you just have to learn to listen to what they are saying."</p>
-                </div>
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"You've done what took me decades and decades to be able to do — explaining what my job was to someone in two minutes."</p>
-                </div>
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"If you can get this up and working, you will be able to write it up as a nice technical note in the conservation journal."</p>
-                </div>
-                <div style="border-left: 3px solid #d1d5db; padding: 8px 12px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-size: 13px; font-style: italic; line-height: 1.6;">"14 year old children in Bulgaria have solved this problem, what's the matter with you."</p>
-                </div>
-            </div>
-        </div>
+        </section>
+    </main>
 
-    </div>
-</div>
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
