@@ -8,7 +8,13 @@ const i18n = {
         instr_robot: "Основен робот",
 
         instr_run: "Мисия",
-
+        
+        expert_name: "Д-р Иан Маклеод",
+        expert_title: "Световноизвестен експерт по консервация · Западноавстралийски музей",
+        quote_1: "„Мисля, че това е блестяща концепция.“",
+        quote_2: "„Направихте това, което на мен ми отне десетилетия — да обясня работата си на някого за две минути.“",
+        quote_3: "„14-годишни деца в България решиха този проблем, какво ви става на вас?“",
+        project_model_hint: "Плъзни · Завърти · Мащабирай",
         site_logo: "Механо",
         nav_home: "Начало",
         nav_about: "За нас", nav_code: "Код", nav_project: "Проект",
@@ -181,7 +187,12 @@ const i18n = {
 
         instr_run: "Run",
 
-
+        expert_name: "Dr. Ian MacLeod",
+        expert_title: "World-renowned conservation expert · Western Australian Museum",
+        quote_1: "\"So I think it's a brilliant concept.\"",
+        quote_2: "\"You've done what took me decades to do — explaining my job in two minutes.\"",
+        quote_3: "\"14 year old children in Bulgaria have solved this problem, what's the matter with you.\"",
+        project_model_hint: "Drag · Rotate · Zoom",
         site_logo: "Mehano",
         nav_home: "Home",
         nav_about: "About", nav_code: "Code", nav_project: "Project",
@@ -351,6 +362,12 @@ const i18n = {
         robot_instr_desc: "Λεπτομερείς οδηγίες PDF για την κατασκευή του ρομπότ μας.",
 
         instr_robot: "Βασικό Ρομπότ",
+        expert_name: "Δρ Ian MacLeod",
+        expert_title: "Παγκοσμίου φήμης εμπειρογνώμονας συντήρησης · Μουσείο Δυτικής Αυστραλίας",
+        quote_1: "\"Πιστεύω ότι είναι μια λαμπρή ιδέα.\"",
+        quote_2: "\"Κάνατε αυτό που μου πήρε δεκαετίες — να εξηγήσω τη δουλειά μου σε κάποιον σε δύο λεπτά.\"",
+        quote_3: "\"Παιδιά 14 ετών στη Βουλγαρία έλυσαν αυτό το πρόβλημα, εσείς τι κάνετε;\"",
+        project_model_hint: "Σύρετε · Περιστρέψτε · Ζουμ",
 
         instr_run: "Run",
         site_logo: "Mehano",
@@ -428,6 +445,7 @@ const i18n = {
         project_name: "ASOA 2.0 - Αυτοματοποιημένο Σύστημα Αφαλάτωσης",
         project_desc: "Μια λύση που κάνει τον κόσμο καλύτερο μέσω της τεχνολογίας και της παρακολούθησης IoT.",
         project_problem_label: "Πρόβλημα",
+        
         project_problem: "Τα αρχαιολογικά ευρήματα από τη θάλασσα καταστρέφονται γρήγορα λόγω των κρυστάλλων αλατιού εάν δεν αφαλατωθούν σωστά.",
         project_solution_label: "Λύση",
         project_solution: "Το σύστημα ASOA 2.0 αυτοματοποιεί την παρακολούθηση μέσω πλατφόρμας IoT και επιστημονικού αλγορίθμου.",
@@ -512,7 +530,12 @@ const i18n = {
         robot_instr_desc: "用于构建我们的机器人和附件的详细 PDF 指令。",
 
         instr_robot: "基础机器人",
-
+        expert_name: "伊恩·麦克劳德博士",
+        expert_title: "世界著名的保护专家 · 西澳大利亚博物馆",
+        quote_1: "“我认为这是一个才华横溢的概念。”",
+        quote_2: "“你们做到了我花了几十年才做到的事情——在两分钟内向别人解释我的工作。”",
+        quote_3: "“保加利亚的14岁孩子解决了这个问题，你们怎么了？”",
+        project_model_hint: "拖动 · 旋转 · 缩放",
         instr_run: "任务",
 
         site_logo: "Mehano",
@@ -857,7 +880,12 @@ const i18n = {
         robot_instr_desc: "Instrucciones detalladas en PDF para construir nuestro robot y accesorios.",
 
         instr_robot: "Robot Base",
-
+        expert_name: "Dr. Ian MacLeod",
+        expert_title: "Experto en conservación de renombre mundial · Museo de Australia Occidental",
+        quote_1: "\"Creo que es un concepto brillante.\"",
+        quote_2: "\"Habéis hecho lo que a mí me costó décadas — explicar mi trabajo a alguien en dos minutos.\"",
+        quote_3: "\"Niños de 14 años en Bulgaria han resuelto este problema, ¿qué os pasa a vosotros?\"",
+        project_model_hint: "Arrastrar · Girar · Zoom",
         instr_run: "Misión",
 
         gr_rule_num: "REGLA",
