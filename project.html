@@ -65,22 +65,71 @@
             right: 14px;
         }
 
+        /* Styles for the Expert Testimonial Section */
+        .expert-quote-card {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .expert-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        .expert-info {
+            padding: 20px 24px 8px;
+        }
+        .expert-name {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        .expert-title {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+        .quotes-container {
+            padding: 12px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .quote-item {
+            border-left: 3px solid #6366f1;
+            padding: 10px 14px;
+            background: #f9fafb;
+            border-radius: 0 8px 8px 0;
+        }
+        .quote-text {
+            margin: 0;
+            font-size: 0.9rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: #374151;
+        }
+
         @media (max-width: 600px) {
             model-viewer { height: 280px; }
+            .expert-img { height: 200px; }
         }
     </style>
     <link rel="icon" type="image/jpeg" href="assets/teammehano_logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
 
     <!-- NAVBAR -->
     <nav id="navbar">
@@ -113,17 +162,15 @@
         <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span data-i18n="nav_contact">Контакт</span></a>
     </div>
 
-
     <main style="padding-top: 100px;">
-        <!-- PROJECT -->
         <section id="project">
             <div class="container">
                 <div class="reveal">
                     <div class="section-label" data-i18n="project_label">Проект</div>
                     <h2 class="section-title" data-i18n="project_title">Нашият иновативен проект</h2>
-                    <p class="section-desc" data-i18n="project_desc">Решение, което прави света около нас по-добро място.
-                    </p>
+                    <p class="section-desc" data-i18n="project_desc">Решение, което прави света около нас по-добро място.</p>
                 </div>
+
                 <div class="project-card reveal">
                     <div class="project-card-header">
                         <div class="project-card-title">project.md</div>
@@ -131,6 +178,7 @@
                     </div>
                     <div class="project-body">
                         <h3 data-i18n="project_name">Автоматизирана система за обесоляване на артефакти</h3>
+                        
                         <div class="project-sections">
                             <div class="project-section">
                                 <div class="project-section-icon problem">
@@ -138,9 +186,7 @@
                                 </div>
                                 <div>
                                     <h4 data-i18n="project_problem_label">Проблем</h4>
-                                    <p data-i18n="project_problem">Традиционното обезсоляване на морски артефакти е бавен,
-                                        изцяло ръчен и неточен процес, който изисква консерваторите да пътуват стотици
-                                        километри за рутинни измервания.</p>
+                                    <p data-i18n="project_problem">Традиционното обезсоляване на морски артефакти е бавен, изцяло ръчен и неточен процес, който изисква консерваторите да пътуват стотици километри за рутинни измервания.</p>
                                 </div>
                             </div>
                             <div class="project-section">
@@ -149,9 +195,7 @@
                                 </div>
                                 <div>
                                     <h4 data-i18n="project_solution_label">Решение</h4>
-                                    <p data-i18n="project_solution">Системата ASOA 2.0 автоматизира мониторинга и
-                                        управлението на дезалинацията чрез IoT платформа и научен алгоритъм, позволяващ на
-                                        експертите да следят процеса в реално време.</p>
+                                    <p data-i18n="project_solution">Системата ASOA 2.0 автоматизира мониторинга и управлението на дезалинацията чрез IoT платформа и научен алгоритъм, позволяващ на експертите да следят процеса в реално време.</p>
                                 </div>
                             </div>
                             <div class="project-section">
@@ -160,81 +204,74 @@
                                 </div>
                                 <div>
                                     <h4 data-i18n="project_impact_label">Въздействие</h4>
-                                    <p data-i18n="project_impact">Внедряването на ASOA 2.0 съкращава времето за консервация
-                                        с месеци, минимизира грешките и разходите за логистика, гарантирайки спасяването на
-                                        световното подводно културно наследство.</p>
+                                    <p data-i18n="project_impact">Внедряването на ASOA 2.0 съкращава времето за консервация с месеци, минимизира грешките и разходите за логистика, гарантирайки спасяването на световното подводно културно наследство.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div style="max-width: 600px; margin: 40px auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); overflow: hidden; font-family: inherit;">
-<div style="max-width: 560px; margin: 1.5rem auto; background: white; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
-  <img src="https://visit.museum.wa.gov.au/sites/default/files/2025/02/imported-news-feature-images/Ian-MacLeod.jpg" alt="Д-р Иан Маклеод" style="width: 100%; height: 280px; object-fit: cover; object-position: top; display: block;">
-  <div style="padding: 20px 24px 8px;">
-    <p style="margin: 0; font-size: 18px; font-weight: 600;">Д-р Иан Маклеод</p>
-    <p style="margin: 4px 0 0; font-size: 13px; color: #6b7280;">Световноизвестен експерт по консервация · Западноавстралийски музей</p>
-  </div>
-  <div style="padding: 12px 24px 24px; display: flex; flex-direction: column; gap: 12px;">
-    <div style="border-left: 3px solid #d1d5db; padding: 10px 14px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-      <p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.6;">"So I think it's a brilliant concept."</p>
-    </div>
-    <div style="border-left: 3px solid #d1d5db; padding: 10px 14px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-      <p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.6;">"You will find that as you start working on these objects they will begin to speak to you. They are real to me, they are alive and you just have to learn to listen to what they are saying."</p>
-    </div>
-    <div style="border-left: 3px solid #d1d5db; padding: 10px 14px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-      <p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.6;">"You've done what took me decades and decades to be able to do — explaining what my job was to someone in two minutes."</p>
-    </div>
-    <div style="border-left: 3px solid #d1d5db; padding: 10px 14px; background: #f9fafb; border-radius: 0 8px 8px 0;">
-      <p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.6;">"14 year old children in Bulgaria have solved this problem, what's the matter with you."</p>
-    </div>
-  </div>
-</div>
-                    <!-- 3D MODEL VIEWER -->
-                    <div class="project-model-wrap">
-                        <div class="project-model-header">
-                            <span class="project-model-badge">3D Model</span>
-                            <span class="project-model-label">ASOA 2.0 &mdash; Interactive Preview</span>
-                            <span class="project-model-hint">Drag &middot; Rotate &middot; Zoom</span>
+
+                        <!-- NEW: Expert Quote Section -->
+                        <div class="expert-quote-card reveal">
+                            <img src="https://visit.museum.wa.gov.au/sites/default/files/2025/02/imported-news-feature-images/Ian-MacLeod.jpg" alt="Д-р Иан Маклеод" class="expert-img">
+                            <div class="expert-info">
+                                <p class="expert-name" data-i18n="expert_name">Д-р Иан Маклеод</p>
+                                <p class="expert-title" data-i18n="expert_title">Световноизвестен експерт по консервация · Западноавстралийски музей</p>
+                            </div>
+                            <div class="quotes-container">
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_1">"So I think it's a brilliant concept."</p>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_2">"You've done what took me decades and decades to be able to do — explaining what my job was to someone in two minutes."</p>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text" data-i18n="quote_3">"14 year old children in Bulgaria have solved this problem, what's the matter with you."</p>
+                                </div>
+                            </div>
                         </div>
-                        <model-viewer
-                            fetchpriority="high"
-                            src="assets/project3dmodel.glb"
-                            alt="ASOA 2.0 automated artifact desalination system 3D model"
-                            auto-rotate
-                            auto-rotate-delay="800"
-                            rotation-per-second="18deg"
-                            camera-controls
-                            touch-action="pan-y"
-                            shadow-intensity="1.1"
-                            shadow-softness="0.7"
-                            environment-image="neutral"
-                            exposure="1.1"
-                            ar
-                            ar-modes="webxr scene-viewer quick-look"
-                            loading="eager"
-                        >
-                            <div slot="progress-bar"></div>
-                        </model-viewer>
+
+                        <!-- 3D MODEL VIEWER -->
+                        <div class="project-model-wrap">
+                            <div class="project-model-header">
+                                <span class="project-model-badge">3D Model</span>
+                                <span class="project-model-label">ASOA 2.0 &mdash; Interactive Preview</span>
+                                <span class="project-model-hint">Drag &middot; Rotate &middot; Zoom</span>
+                            </div>
+                            <model-viewer
+                                fetchpriority="high"
+                                src="assets/project3dmodel.glb"
+                                alt="ASOA 2.0 automated artifact desalination system 3D model"
+                                auto-rotate
+                                auto-rotate-delay="800"
+                                rotation-per-second="18deg"
+                                camera-controls
+                                touch-action="pan-y"
+                                shadow-intensity="1.1"
+                                shadow-softness="0.7"
+                                environment-image="neutral"
+                                exposure="1.1"
+                                ar
+                                ar-modes="webxr scene-viewer quick-look"
+                                loading="eager"
+                            >
+                                <div slot="progress-bar"></div>
+                            </model-viewer>
+                        </div>
                     </div>
 
                     <div class="project-footer">
-                        <a href="project-details.html" class="btn-secondary" style="font-size:0.82rem;padding:10px 20px"
-                            data-i18n="project_docs">📄 Документация</a>
-                        <a href="https://asoa-2-0.vercel.app/" target="_blank" class="btn-primary"
-                            style="font-size:0.82rem;padding:10px 20px" data-i18n="project_site">🌐 Виж сайта</a>
+                        <a href="project-details.html" class="btn-secondary" style="font-size:0.82rem;padding:10px 20px" data-i18n="project_docs">📄 Документация</a>
+                        <a href="https://asoa-2-0.vercel.app/" target="_blank" class="btn-primary" style="font-size:0.82rem;padding:10px 20px" data-i18n="project_site">🌐 Виж сайта</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-
     <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
             <div class="footer-content reveal">
                 <div class="footer-logo" data-i18n-html="site_logo">МЕХА<span>НО</span></div>
-                
                 <div class="footer-links">
                     <a href="https://www.facebook.com/share/14fhyT4UMTZ/" target="_blank" aria-label="Facebook"><img src="assets/facebook_icon.png" alt="Facebook" class="footer-social-icon"></a>
                     <a href="https://www.instagram.com/team.mehano?igsh=MXFobXhndnludW91OA==" target="_blank" aria-label="Instagram"><img src="assets/Instagram_icon.png" alt="Instagram" class="footer-social-icon"></a>
@@ -243,8 +280,6 @@
             </div>
         </div>
     </footer>
-
-    
 
     <!-- FLOATING LANGUAGE SWITCHER -->
     <div class="lang-fab" id="langFab">
@@ -265,8 +300,6 @@
             </svg>
         </button>
     </div>
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
